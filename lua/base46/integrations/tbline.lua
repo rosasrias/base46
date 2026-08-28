@@ -1,12 +1,60 @@
 local colors = require("base46").get_theme_tb "base_30"
-
 local config = require "nvconfig"
 
 local highlights = {
-  Tabline = { bg = colors.black2 },
+  Tabline = {
+    bg = colors.black2,
+  },
 
   TbFill = {
     bg = colors.black2,
+  },
+
+  TbScroll = {
+    fg = colors.nord_blue,
+    bg = colors.black2,
+  },
+
+  TbTabOn = {
+    fg = colors.red,
+    bg = colors.black,
+  },
+
+  TbTabOff = {
+    fg = colors.white,
+    bg = colors.black2,
+  },
+
+  TbTabNewBtn = {
+    fg = colors.white,
+    bg = colors.one_bg2,
+  },
+
+  TbBuffLineRun = {
+    fg = colors.green,
+    bg = colors.black,
+  },
+
+  TbBuffLineSplit = {
+    fg = colors.grey,
+    bg = colors.black2,
+  },
+
+  TbBufflineTrans = {
+    fg = colors.light_grey,
+    bg = colors.black2,
+  },
+
+  TbBuffLineToggleTheme = {
+    fg = colors.white,
+    bg = colors.one_bg3,
+    bold = true,
+  },
+
+  TbBufflineCloseButton = {
+    fg = colors.black,
+    bg = colors.red,
+    bold = true,
   },
 
   TbBufOn = {
@@ -28,69 +76,29 @@ local highlights = {
     fg = colors.red,
     bg = colors.black2,
   },
-
-  TbBufOnClose = {
-    fg = colors.red,
-    bg = colors.black,
-  },
-
-  TbBufOffClose = {
-    fg = colors.light_grey,
-    bg = colors.black2,
-  },
-
-  TbTabNewBtn = {
-    fg = colors.white,
-    bg = colors.one_bg2,
-  },
-
-  TbTabOn = {
-    fg = colors.red,
-    bg = colors.black,
-  },
-
-  TbTabOff = {
-    fg = colors.white,
-    bg = colors.black2,
-  },
-
-  TbTabCloseBtn = {
-    fg = colors.black,
-    bg = colors.nord_blue,
-  },
-
-  TBTabTitle = {
-    fg = colors.black,
-    bg = colors.blue,
-  },
-
-  TbThemeToggleBtn = {
-    bold = true,
-    fg = colors.white,
-    bg = colors.one_bg3,
-  },
-
-  TbCloseAllBufsBtn = {
-    bold = true,
-    bg = colors.red,
-    fg = colors.black,
-  },
 }
 
 local hlgroups_glassy = {
   "Tabline",
   "TbFill",
+  "TbScroll",
+  "TbTabOn",
+  "TbTabOff",
+  "TbTabNewBtn",
+  "TbBuffLineRun",
+  "TbBuffLineSplit",
+  "TbBufflineTrans",
+  "TbBuffLineToggleTheme",
+  "TbBufflineCloseButton",
   "TbBufOn",
   "TbBufOff",
-  "TbBufOnClose",
-  "TbBufOffClose",
   "TbBufOnModified",
   "TbBufOffModified",
 }
 
 if config.base46.transparency then
-  for _, val in ipairs(hlgroups_glassy) do
-    highlights[val].bg = "NONE"
+  for _, name in ipairs(hlgroups_glassy) do
+    highlights[name].bg = "NONE"
   end
 end
 
