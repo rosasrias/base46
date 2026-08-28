@@ -278,7 +278,7 @@ end
 -- @return The mixed color as a hex value
 M.mix = function(first, second, strength)
   if strength == nil then
-    strength = 50
+    strength = 0.5
   end
 
   local s = strength / 100
@@ -299,6 +299,32 @@ M.mix = function(first, second, strength)
   local g3 = g1 * (1 - s) + g2 * s
   local b3 = b1 * (1 - s) + b2 * s
 
+  return M.rgb2hex(r3, g3, b3)
+end
+
+-- Blend two colors using alpha transparency
+-- @param foreground The hex color value of the foreground color
+-- @param background The hex color value of the background color
+-- @param alpha The alpha value (0 to 1) that determines the transparency level of the foreground color
+-- @return The blended hex color value
+M.blend = function(foreground, background, alpha)
+  -- Convert the hex colors to RGB values
+  local r1, g1, b1 = M.hex2rgb(foreground)
+  local r2, g2, b2 = M.hex2rgb(background)
+
+  -- Ensure that the alpha value is between 0 and 1
+  if alpha < 0 then
+    alpha = 0
+  elseif alpha > 1 then
+    alpha = 1
+  end
+
+  -- Calculate the blended RGB values using the formula
+  local r3 = math.floor(r1 * alpha + r2 * (1 - alpha))
+  local g3 = math.floor(g1 * alpha + g2 * (1 - alpha))
+  local b3 = math.floor(b1 * alpha + b2 * (1 - alpha))
+
+  -- Return the blended color as a hex value
   return M.rgb2hex(r3, g3, b3)
 end
 
