@@ -1,6 +1,7 @@
 local colors = require("base46").get_theme_tb "base_30"
 local theme = require("base46").get_theme_tb "base_16"
 local lighten = require("base46.colors").change_hex_lightness
+local blend = require("base46.colors").blend
 
 local defaults = {
   Added = { fg = colors.green },
@@ -13,13 +14,18 @@ local defaults = {
   PmenuThumb = { bg = colors.grey },
   MatchParen = { link = "MatchWord" },
   Comment = { fg = colors.light_grey },
-  CursorLineNr = { fg = colors.white },
+  CursorLineNr = { fg = colors.nord_blue },
   LineNr = { fg = colors.grey },
-  FloatBorder = { fg = colors.blue },
-  FloatTitle = { fg = colors.white, bg = colors.grey },
+  FloatBorder = { fg = colors.darker_black, bg = colors.darker_black },
+  FloatTitle = { fg = colors.black, bg = colors.blue },
+  HarpoonTitle = { fg = colors.black, bg = colors.red },
   NormalFloat = { bg = colors.darker_black },
+  TerminalTitle = { bg = colors.purple, fg = colors.darker_black, bold = true },
+  TerminalNormal = { bg = colors.darker_black },
   NvimInternalError = { fg = colors.red },
-  WinSeparator = { fg = colors.line },
+  WinSeparator = { fg = colors.darker_black, bg = colors.darker_black },
+  WinBar = { bg = colors.darker_black },
+  WinBarNC = { bg = colors.darker_black },
   Normal = { fg = theme.base05, bg = theme.base00 },
   DevIconDefault = { fg = colors.red },
   Debug = { fg = theme.base08 },
@@ -27,8 +33,8 @@ local defaults = {
   Error = { fg = theme.base00, bg = theme.base08 },
   ErrorMsg = { fg = theme.base08, bg = theme.base00 },
   Exception = { fg = theme.base08 },
-  FoldColumn = { fg = theme.base0F, bg = "none" },
-  Folded = { fg = colors.light_grey, bg = colors.black2 },
+  FoldColumn = { fg = colors.blue },
+  Folded = { fg = colors.blue, bg = colors.black2 },
   IncSearch = { fg = theme.base01, bg = theme.base09 },
   Macro = { fg = theme.base08 },
   ModeMsg = { fg = theme.base0B },
@@ -38,7 +44,7 @@ local defaults = {
   Substitute = { fg = theme.base01, bg = theme.base0A },
   SpecialKey = { fg = theme.base03 },
   TooLong = { fg = theme.base08 },
-  Visual = { bg = theme.base02 },
+  Visual = { bg = colors.grey },
   VisualNOS = { fg = theme.base08 },
   WarningMsg = { fg = theme.base08 },
   WildMenu = { fg = theme.base08, bg = theme.base0A },
@@ -52,8 +58,10 @@ local defaults = {
   CursorLine = { bg = colors.black2 },
   QuickFixLine = { bg = theme.base01 },
   healthSuccess = { bg = colors.green, fg = colors.black },
-  WinBar = { bg = "NONE" },
-  WinBarNC = { bg = "NONE" },
+  -- WinBar = { bg = "NONE" },
+  -- WinBarNC = { bg = "NONE" },
+  TabLineSel = { bg = colors.purple, fg = colors.black, bold = true },
+  TabLine = { fg = colors.purple, bg = blend(colors.purple, colors.black, 0.10) },
 
   -- lazy.nvim
   LazyH1 = { bg = colors.green, fg = colors.black },
@@ -83,6 +91,7 @@ local defaults = {
   NvDashButtons = { fg = colors.light_grey },
   NvDashFooter = { fg = colors.red },
 }
+
 
 -- merge statusline & hl_add tables!
 local merge_tb = require("base46").merge_tb
