@@ -1,6 +1,6 @@
 local get_theme_tb = require("base46").get_theme_tb
 local colors = get_theme_tb "base_30"
-local utils = require("base46.utils")
+local utils = require("base46.colors")
 
 return {
   StatusLine = { bg = colors.statusline_bg },
@@ -82,7 +82,8 @@ return {
     bg = colors.purple,
     fg = colors.black,
   },
-  StalineLspNameNormal = {
+
+  StalineLspText = {
     bg = utils.blend(colors.purple, colors.black, 0.07),
     fg = colors.purple,
   },
@@ -154,4 +155,14 @@ return {
     bg = colors.black,
     fg = colors.grey_fg,
   },
+
+  St_gitAdded = { fg = colors.green },
+  St_gitChanged = { fg = colors.yellow },
+  St_gitRemoved = { fg = colors.red},
+
+  St_lspError = { fg = colors.red},
+  St_lspWarning = { fg = colors.yellow},
+  St_lspHints = { fg = colors.blue},
+  St_lspInfo = { fg = colors.cyan},
+  St_gitIcons = { fg = colors.grey_fg},
 }

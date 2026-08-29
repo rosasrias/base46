@@ -17,11 +17,14 @@ return {
     bg = colors.grey,
   },
 
+  StalineModeSepTwo = { bg = colors.lightbg, fg = colors.grey },
+
   StalineInsertMode = {
     bg = colors.green,
     fg = colors.black,
     bold = true,
   },
+
   StalineInsertModeSep = {
     fg = colors.green,
     bg = colors.grey,
@@ -104,7 +107,7 @@ return {
 
   StalineFilenameSep = {
     fg = colors.lightbg,
-    bg = colors.black,
+    bg = colors.statusline_bg,
   },
 
   StalineFolderIcon = {
@@ -216,4 +219,14 @@ return {
     bg = colors.black,
     fg = colors.grey_fg,
   },
+
+  St_gitAdded = { fg = colors.green },
+  St_gitChanged = { fg = colors.yellow },
+  St_gitRemoved = { fg = colors.red},
+
+  St_lspError = { fg = colors.red},
+  St_lspWarning = { fg = colors.yellow},
+  St_lspHints = { fg = colors.blue},
+  St_lspInfo = { fg = colors.cyan},
+  St_gitIcons = { fg = colors.grey_fg}
 }
