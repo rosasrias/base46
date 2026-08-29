@@ -26,7 +26,7 @@ local highlights = {
   },
 
   TbTabNewBtn = {
-    fg = colors.white,
+    fg = colors.nord_blue,
     bg = colors.one_bg2,
   },
 
@@ -36,18 +36,18 @@ local highlights = {
   },
 
   TbBuffLineSplit = {
-    fg = colors.grey,
-    bg = colors.black2,
+    fg = colors.purple,
+    bg = colors.black,
   },
 
   TbBufflineTrans = {
-    fg = colors.light_grey,
-    bg = colors.black2,
+    fg = colors.cyan,
+    bg = colors.black,
   },
 
   TbBuffLineToggleTheme = {
-    fg = colors.white,
-    bg = colors.one_bg3,
+    fg = colors.sun,
+    bg = colors.black,
     bold = true,
   },
 
@@ -76,6 +76,16 @@ local highlights = {
     fg = colors.red,
     bg = colors.black2,
   },
+
+  TbKillBufOn = {
+    fg = colors.red,
+    bg = colors.black,
+  },
+
+  TbKillBufOff = {
+    fg = colors.red,
+    bg = colors.black2,
+  }
 }
 
 local hlgroups_glassy = {
