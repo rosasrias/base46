@@ -62,6 +62,7 @@ local defaults = {
   -- WinBarNC = { bg = "NONE" },
   TabLineSel = { bg = colors.purple, fg = colors.black, bold = true },
   TabLine = { fg = colors.purple, bg = blend(colors.purple, colors.black, 0.10) },
+  CodeRunnerTermTitle = { fg = colors.black, bg = colors.purple },
 
   -- lazy.nvim
   LazyH1 = { bg = colors.green, fg = colors.black },
@@ -91,7 +92,6 @@ local defaults = {
   NvDashButtons = { fg = colors.light_grey },
   NvDashFooter = { fg = colors.red },
 }
-
 
 -- merge statusline & hl_add tables!
 local merge_tb = require("base46").merge_tb
