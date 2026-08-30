@@ -15,6 +15,7 @@ local integrations = {
   "blankline",
   "blink",
   "cmp",
+  "code-runner",
   "defaults",
   "devicons",
   "git",
