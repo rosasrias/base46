@@ -102,7 +102,7 @@ return {
 
   StalineFilenameFancy = {
     bg = colors.lightbg,
-    fg = colors.statusline_bg,
+    fg = utils.blend(colors.white, colors.lightbg, 0.5),
   },
 
   StalineFilenameSep = {
