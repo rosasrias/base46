@@ -17,7 +17,7 @@ return {
     bg = colors.grey,
   },
 
-  StalineModeSepTwo = { bg = colors.statusline_bg, fg = colors.grey },
+  StalineModeSepTwo = { bg = colors.lightbg, fg = colors.grey },
 
   StalineInsertMode = {
     bg = colors.green,
@@ -102,7 +102,7 @@ return {
 
   StalineFilenameFancy = {
     bg = colors.lightbg,
-    fg = utils.blend(colors.white, colors.lightbg, 0.5),
+    fg = colors.statusline_bg,
   },
 
   StalineFilenameSep = {
