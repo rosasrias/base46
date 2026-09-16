@@ -224,4 +224,7 @@ M.FloatBorder = {
   bg = "NONE",
 }
 
+M.CmpBorder = { fg = colors.grey, bg = "NONE" }
+M.CmpDocBorder = { fg = colors.grey, bg = "NONE" }
+
 return M
