@@ -208,7 +208,7 @@ M.NotifyERRORBorder = {
 }
 
 M.NotifyDEBUGBorder = {
-  fg = colors.blue,
+  fg = colors.purple,
   bg = "NONE",
 }
 
@@ -216,6 +216,18 @@ M.NotifyTRACEBorder = {
   fg = colors.green,
   bg = "NONE",
 }
+
+M.NotifyINFOTitle = { fg = colors.blue, bg = "NONE", bold = true }
+M.NotifyWARNTitle = { fg = colors.yellow, bg = "NONE", bold = true }
+M.NotifyERRORTitle = { fg = colors.red, bg = "NONE", bold = true }
+M.NotifyDEBUGTitle = { fg = colors.purple, bg = "NONE", bold = true }
+M.NotifyTRACETitle = { fg = colors.green, bg = "NONE", bold = true }
+
+M.NotifyINFOIcon = { fg = colors.blue, bg = "NONE" }
+M.NotifyWARNIcon = { fg = colors.yellow, bg = "NONE" }
+M.NotifyERRORIcon = { fg = colors.red, bg = "NONE" }
+M.NotifyDEBUGIcon = { fg = colors.purple, bg = "NONE" }
+M.NotifyTRACEIcon = { fg = colors.green, bg = "NONE" }
 
 M.NotifyBackground = {
   fg = "NONE",
