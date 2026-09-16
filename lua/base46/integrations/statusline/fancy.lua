@@ -216,7 +216,7 @@ return {
   },
 
   StalineEmptySpace = {
-    bg = colors.black,
+    bg = colors.statusline_bg,
     fg = colors.grey_fg,
   },
 
