@@ -31,6 +31,9 @@ local M = {}
 -- @return g: Green (0-255)
 -- @return b: Blue (0-255)
 M.hex2rgb = function(hex)
+  if type(hex) ~= "string" then
+    return nil
+  end
   local hash = string.sub(hex, 1, 1) == "#"
   if string.len(hex) ~= (7 - (hash and 0 or 1)) then
     return nil
@@ -311,6 +314,10 @@ M.blend = function(foreground, background, alpha)
   -- Convert the hex colors to RGB values
   local r1, g1, b1 = M.hex2rgb(foreground)
   local r2, g2, b2 = M.hex2rgb(background)
+
+  if r1 == nil or r2 == nil then
+    return foreground or background
+  end
 
   -- Ensure that the alpha value is between 0 and 1
   if alpha < 0 then
