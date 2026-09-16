@@ -125,11 +125,6 @@ local transparent_groups = {
   -- Treesitter
   "TreesitterContext",
 
-  -- Bufferline / tabline
-  "BuffLineTree",
-  "TabLine",
-  "TabLineFill",
-
   -- Saga
   "SagaNormal",
   "SagaBorder",
