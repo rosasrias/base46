@@ -1,6 +1,6 @@
 local get_theme_tb = require("base46").get_theme_tb
 local colors = get_theme_tb "base_30"
-local utils = require("base46.colors")
+local utils = require "base46.colors"
 
 return {
   StatusLine = {
@@ -17,7 +17,7 @@ return {
     bg = colors.grey,
   },
 
-  StalineModeSepTwo = { bg = colors.lightbg, fg = colors.grey },
+  StalineModeSepTwo = { bg = colors.statusline_bg, fg = colors.grey },
 
   StalineInsertMode = {
     bg = colors.green,
@@ -222,11 +222,11 @@ return {
 
   St_gitAdded = { fg = colors.green },
   St_gitChanged = { fg = colors.yellow },
-  St_gitRemoved = { fg = colors.red},
+  St_gitRemoved = { fg = colors.red },
 
-  St_lspError = { fg = colors.red},
-  St_lspWarning = { fg = colors.yellow},
-  St_lspHints = { fg = colors.blue},
-  St_lspInfo = { fg = colors.cyan},
-  St_gitIcons = { fg = colors.grey_fg}
+  St_lspError = { fg = colors.red },
+  St_lspWarning = { fg = colors.yellow },
+  St_lspHints = { fg = colors.blue },
+  St_lspInfo = { fg = colors.cyan },
+  St_gitIcons = { fg = colors.grey_fg },
 }
