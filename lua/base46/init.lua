@@ -107,6 +107,10 @@ M.extend_default_hl = function(highlights, integration_name)
     for key, value in pairs(glassy) do
       if highlights[key] then
         highlights[key] = M.merge_tb(highlights[key], value)
+      elseif key:match "Border$" then
+        -- ensure borders exist even if style didn't define them (e.g. atom without CmpBorder)
+        -- so transparent mode always gets grey border instead of fallback white/black
+        highlights[key] = vim.deepcopy(value)
       end
     end
   end

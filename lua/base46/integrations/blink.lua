@@ -78,12 +78,14 @@ local styles = {
 
   atom = {
     BlinkCmpMenu = { bg = colors.black2 },
+    BlinkCmpMenuBorder = { fg = colors.grey_fg },
     BlinkCmpDoc = { bg = colors.darker_black },
     BlinkCmpDocBorder = { fg = colors.darker_black, bg = colors.darker_black },
   },
 
   atom_colored = {
     BlinkCmpMenu = { bg = colors.black2 },
+    BlinkCmpMenuBorder = { fg = colors.grey_fg },
     BlinkCmpDoc = { bg = colors.darker_black },
     BlinkCmpDocBorder = { fg = colors.darker_black, bg = colors.darker_black },
   },

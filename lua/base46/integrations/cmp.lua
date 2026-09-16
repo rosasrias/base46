@@ -62,6 +62,7 @@ local styles = {
       bg = colors.black2,
     },
 
+    CmpBorder = { fg = colors.grey_fg },
     CmpDoc = { bg = colors.darker_black },
     CmpDocBorder = { fg = colors.darker_black, bg = colors.darker_black },
   },
@@ -72,6 +73,7 @@ local styles = {
       bg = colors.black2,
     },
 
+    CmpBorder = { fg = colors.grey_fg },
     CmpDoc = { bg = colors.darker_black },
     CmpDocBorder = { fg = colors.darker_black, bg = colors.darker_black },
   },

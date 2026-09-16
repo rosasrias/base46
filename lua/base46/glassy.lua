@@ -69,6 +69,11 @@ local M = {
     fg = colors.grey,
     bg = "NONE",
   },
+
+  NoiceCmdlinePopupBorderSearch = {
+    fg = colors.grey,
+    bg = "NONE",
+  },
 }
 
 -- Highlights that only require a transparent background.
@@ -143,8 +148,6 @@ local transparent_groups = {
   -- Noice
   "NoiceMini",
   "NoiceCmdlinePopup",
-  "NoiceCmdlinePopupBorder",
-  "NoiceCmdlinePopupBorderSearch",
   "NoiceCmdlinePopupTitle",
 
   -- Notifications
@@ -218,13 +221,25 @@ M.NotifyBackground = {
   bg = "NONE",
 }
 
--- Generic floating window border.
+-- Generic floating window borders (re-assert after transparent_groups loop to avoid wipe)
 M.FloatBorder = {
   fg = colors.grey,
   bg = "NONE",
 }
 
+M.TelescopeBorder = { fg = colors.grey, bg = "NONE" }
+M.TelescopePromptBorder = { fg = colors.grey, bg = "NONE" }
+M.TelescopePreviewBorder = { fg = colors.grey, bg = "NONE" }
+M.TelescopeResultsBorder = { fg = colors.grey, bg = "NONE" }
+
 M.CmpBorder = { fg = colors.grey, bg = "NONE" }
 M.CmpDocBorder = { fg = colors.grey, bg = "NONE" }
+
+M.BlinkCmpMenuBorder = { fg = colors.grey, bg = "NONE" }
+M.BlinkCmpDocBorder = { fg = colors.grey, bg = "NONE" }
+M.BlinkCmpSignatureHelpBorder = { fg = colors.grey, bg = "NONE" }
+
+M.NoiceCmdlinePopupBorder = { fg = colors.grey, bg = "NONE" }
+M.NoiceCmdlinePopupBorderSearch = { fg = colors.grey, bg = "NONE" }
 
 return M
