@@ -112,6 +112,7 @@ local transparent_groups = {
   -- Completion
   "Pmenu",
   "CmpPmenu",
+  "CmpDoc",
   "CmpNormal",
   "CmpItemAbbr",
   "CmpItemAbbrDeprecated",
