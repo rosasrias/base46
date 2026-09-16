@@ -1,7 +1,5 @@
 local colors = require("base46").get_theme_tb "base_30"
 
-local config = require "nvconfig"
-
 local highlights = {
   MiniTablineCurrent = {
     fg = colors.white,
@@ -41,19 +39,5 @@ local highlights = {
   },
 }
 
-local hlgroups_glassy = {
-  "MiniTablineCurrent",
-  "MiniTablineVisible",
-  "MiniTablineHidden",
-  "MiniTablineModifiedCurrent",
-  "MiniTablineModifiedVisible",
-  "MiniTablineModifiedHidden",
-}
-
-if config.base46.transparency then
-  for _, val in ipairs(hlgroups_glassy) do
-    highlights[val].bg = "NONE"
-  end
-end
-
+-- Mini-tabline is excluded from transparency/glassy - always remains opaque
 return highlights

@@ -1,5 +1,4 @@
 local colors = require("base46").get_theme_tb "base_30"
-local config = require "nvconfig"
 
 local highlights = {
   Tabline = {
@@ -88,28 +87,5 @@ local highlights = {
   }
 }
 
-local hlgroups_glassy = {
-  "Tabline",
-  "TbFill",
-  "TbScroll",
-  "TbTabOn",
-  "TbTabOff",
-  "TbTabNewBtn",
-  "TbBuffLineRun",
-  "TbBuffLineSplit",
-  "TbBufflineTrans",
-  "TbBuffLineToggleTheme",
-  "TbBufflineCloseButton",
-  "TbBufOn",
-  "TbBufOff",
-  "TbBufOnModified",
-  "TbBufOffModified",
-}
-
-if config.base46.transparency then
-  for _, name in ipairs(hlgroups_glassy) do
-    highlights[name].bg = "NONE"
-  end
-end
-
+-- Tabufline is excluded from transparency/glassy - always remains opaque
 return highlights
