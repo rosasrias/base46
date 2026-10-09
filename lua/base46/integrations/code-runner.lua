@@ -16,4 +16,8 @@ return {
   -- Estado final de la ejecución
   CodeRunnerTermOk = { fg = colors.green },
   CodeRunnerTermErr = { fg = colors.yellow },
+
+  -- Mensaje final "[Process exited N]": azul si OK, rojo si error
+  CodeRunnerExitOk = { fg = colors.blue },
+  CodeRunnerExitErr = { fg = colors.red },
 }
