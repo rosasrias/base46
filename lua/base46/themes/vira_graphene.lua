@@ -65,6 +65,41 @@ M.polish_hl = {
   defaults = {
     Comment = { italic = true }, -- original tokenColors use italic comments
   },
+
+  syntax = {
+    Boolean = { fg = M.base_30.baby_pink }, -- original boolean token
+    Conditional = { fg = M.base_30.cyan, italic = true }, -- original keyword.control
+    Identifier = { fg = M.base_30.white }, -- original variable token
+    Keyword = { fg = M.base_30.cyan }, -- original keyword token
+    Statement = { fg = M.base_30.cyan }, -- original keyword token
+    StorageClass = { fg = M.base_30.purple }, -- original storage token
+  },
+
+  treesitter = {
+    ["@comment"] = { fg = M.base_30.light_grey }, -- original comment color
+    ["@constructor"] = { fg = M.base_30.yellow }, -- original class/component token
+    ["@keyword"] = { fg = M.base_30.cyan }, -- original keyword token
+    ["@keyword.conditional"] = { fg = M.base_30.cyan, italic = true }, -- original keyword.control
+    ["@keyword.conditional.ternary"] = { fg = M.base_30.cyan },
+    ["@keyword.exception"] = { fg = M.base_30.orange }, -- original keyword.other token
+    ["@keyword.function"] = { fg = M.base_30.cyan },
+    ["@keyword.import"] = { fg = M.base_30.cyan },
+    ["@keyword.operator"] = { fg = M.base_30.cyan },
+    ["@keyword.repeat"] = { fg = M.base_30.cyan, italic = true },
+    ["@keyword.return"] = { fg = M.base_30.cyan },
+    ["@keyword.storage"] = { fg = M.base_30.purple }, -- original storage token
+    ["@markup.heading"] = { fg = M.base_30.cyan }, -- original markdown heading
+    ["@markup.list"] = { fg = M.base_30.cyan }, -- original markdown list marker
+    ["@markup.quote"] = { fg = M.base_30.cyan, italic = true }, -- original blockquote
+    ["@markup.raw"] = { fg = M.base_30.green }, -- original codeblock token
+    ["@module"] = { italic = true }, -- original modules are italic
+    ["@punctuation.bracket"] = { fg = M.base_30.cyan }, -- original punctuation token
+    ["@punctuation.delimiter"] = { fg = M.base_30.cyan },
+    ["@tag"] = { fg = M.base_30.red }, -- original html tag token
+    ["@tag.attribute"] = { fg = M.base_30.purple }, -- original html attribute token
+    ["@tag.delimiter"] = { fg = M.base_30.cyan },
+    ["@variable.parameter"] = { fg = M.base_30.white, italic = true }, -- original parameter token
+  },
 }
 
 M.type = "dark"
