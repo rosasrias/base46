@@ -84,7 +84,7 @@ M.polish_hl = {
     ["@keyword.conditional.ternary"] = { fg = M.base_30.cyan },
     ["@keyword.exception"] = { fg = M.base_30.orange }, -- original keyword.other token
     ["@keyword.function"] = { fg = M.base_30.cyan },
-    ["@keyword.import"] = { fg = M.base_30.cyan },
+    ["@keyword.import"] = { link = "@keyword" }, -- base links to blue Include; Vira import is a cyan keyword
     ["@keyword.operator"] = { fg = M.base_30.cyan },
     ["@keyword.repeat"] = { fg = M.base_30.cyan, italic = true },
     ["@keyword.return"] = { fg = M.base_30.cyan },
@@ -99,6 +99,7 @@ M.polish_hl = {
     ["@tag"] = { fg = M.base_30.red }, -- original html tag token
     ["@tag.attribute"] = { fg = M.base_30.purple }, -- original html attribute token
     ["@tag.delimiter"] = { fg = M.base_30.cyan },
+    ["@variable.builtin"] = { fg = M.base_30.white, italic = true }, -- original self-parameter token
     ["@variable.parameter"] = { fg = M.base_30.white, italic = true }, -- original parameter token
   },
 }
