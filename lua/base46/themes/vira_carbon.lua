@@ -3,53 +3,53 @@
 --   editor.background #0A0A0A, foreground #D9D9D9, accent #80CBC4
 -- Carbon uses its own muted ANSI set (red #c85e60, green #a3c679,
 -- yellow #d5b05f, blue #6a90d0, magenta #a178c4, cyan #6ebad7).
--- Derived surfaces and accents via +/- lightness steps from the
--- original colors. darker_black is clamped to #060606 to avoid pure
--- black; grey_fg is derived (upstream line-number fg is darker than
--- the ruler color) and grey_fg2 doubles as base04 to keep the base16
--- brightness progression.
+-- Scale follows the base46 README rules from black, computed with
+-- base46.colors.change_hex_lightness: darker_black -6, black2 +6,
+-- one_bg +10, one_bg2/one_bg3 +6 chained, line +15, grey is the
+-- original ruler color (README: choose the perfect grey),
+-- grey_fg +10 grey, grey_fg2 +5 grey_fg, sun +8 yellow.
 
 local M = {}
 
 M.base_30 = {
   white = "#D9D9D9",
-  darker_black = "#060606",
+  darker_black = "#000000",
   black = "#0A0A0A", --  nvim bg
   black2 = "#191919",
-  one_bg = "#161718", -- original input.background
-  one_bg2 = "#252628",
-  one_bg3 = "#343538",
+  one_bg = "#232323",
+  one_bg2 = "#323232",
+  one_bg3 = "#414141",
   grey = "#383838", -- original indent guide / ruler
-  grey_fg = "#474747", -- derived: lighten(grey) for hierarchy
-  grey_fg2 = "#56575D", -- original line number active / sidebar fg
+  grey_fg = "#515151",
+  grey_fg2 = "#5d5d5d",
   light_grey = "#45454A", -- original comment color
   red = "#c85e60",
   baby_pink = "#d6808f", -- original boolean token
   pink = "#c85e60",
-  line = "#2F3237", -- original line highlight border
+  line = "#303030",
   green = "#a3c679",
-  vibrant_green = "#b7d296",
-  nord_blue = "#89a7da",
+  vibrant_green = "#b6d295",
+  nord_blue = "#89a7d9",
   blue = "#6a90d0",
   yellow = "#d5b05f",
-  sun = "#dbbc77",
+  sun = "#ddbf7f",
   purple = "#a178c4",
-  dark_purple = "#8d5cb8",
+  dark_purple = "#8d5bb7",
   teal = "#80CBC4", -- original accent (selection/badge/tab border)
   orange = "#cd775c", -- original number token
   cyan = "#6ebad7",
   statusline_bg = "#191919",
-  lightbg = "#161718",
+  lightbg = "#232323",
   pmenu_bg = "#80CBC4",
   folder_bg = "#6a90d0",
 }
 
 M.base_16 = {
   base00 = "#0A0A0A",
-  base01 = "#161718",
-  base02 = "#252628",
+  base01 = "#232323",
+  base02 = "#323232",
   base03 = "#45454A",
-  base04 = "#56575D",
+  base04 = "#5d5d5d",
   base05 = "#D9D9D9",
   base06 = "#e3e3e3",
   base07 = "#ffffff",

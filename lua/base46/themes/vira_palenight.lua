@@ -1,56 +1,55 @@
 -- Credits to the original Vira Theme (vira.vsc-vira-theme, successor of Material Theme)
 -- Adapted from the official VSCode palette Vira-Theme-Palenight.json:
 --   editor.background #232634, foreground #CED1E3, accent #80CBC4
--- Derived surfaces (darker_black/black2/one_bg2/one_bg3) and accents
--- (vibrant_green/nord_blue/sun/dark_purple) via +/- lightness steps
--- from the original colors. grey_fg is derived (upstream line-number fg
--- is darker than the ruler color). Upstream uses #676E95 for both the
--- comment color and the active line-number fg, so base03 and base04
--- intentionally share that value.
+-- Scale follows the base46 README rules from black, computed with
+-- base46.colors.change_hex_lightness: darker_black -6, black2 +6,
+-- one_bg +10, one_bg2/one_bg3 +6 chained, line +15, grey is the
+-- original ruler color (README: choose the perfect grey),
+-- grey_fg +10 grey, grey_fg2 +5 grey_fg, sun +8 yellow.
 
 local M = {}
 
 M.base_30 = {
   white = "#CED1E3",
-  darker_black = "#171922",
+  darker_black = "#161821",
   black = "#232634", --  nvim bg
   black2 = "#2f3346",
-  one_bg = "#333747", -- original input.background
-  one_bg2 = "#404559",
-  one_bg3 = "#4d536b",
+  one_bg = "#373c52",
+  one_bg2 = "#434964",
+  one_bg3 = "#4f5676",
   grey = "#4E5579", -- original indent guide / ruler
-  grey_fg = "#5a628c", -- derived: lighten(grey) for hierarchy
-  grey_fg2 = "#676E95", -- original line number active / sidebar fg
+  grey_fg = "#616a98",
+  grey_fg2 = "#6f77a3",
   light_grey = "#676E95", -- original comment color
   red = "#f07178",
   baby_pink = "#ff9cac", -- original boolean token
   pink = "#f07178",
-  line = "#373D53", -- original line highlight border
+  line = "#414761",
   green = "#C3E88D",
-  vibrant_green = "#d5efaf",
-  nord_blue = "#abc6ff",
+  vibrant_green = "#d4eeae",
+  nord_blue = "#aac5ff",
   blue = "#82AAFF",
   yellow = "#FFCB6B",
-  sun = "#ffd68a",
+  sun = "#ffd993",
   purple = "#C792EA",
-  dark_purple = "#b570e3",
+  dark_purple = "#b56fe3",
   teal = "#80CBC4", -- original accent (selection/badge/tab border)
   orange = "#F78C6C", -- original number token
   cyan = "#89DDFF",
   statusline_bg = "#2f3346",
-  lightbg = "#333747",
+  lightbg = "#373c52",
   pmenu_bg = "#80CBC4",
   folder_bg = "#82AAFF",
 }
 
 M.base_16 = {
   base00 = "#232634",
-  base01 = "#333747",
-  base02 = "#404559",
+  base01 = "#373c52",
+  base02 = "#434964",
   base03 = "#676E95",
-  base04 = "#676E95",
+  base04 = "#6f77a3",
   base05 = "#CED1E3",
-  base06 = "#dbddea",
+  base06 = "#daddea",
   base07 = "#ffffff",
   base08 = "#f07178",
   base09 = "#F78C6C",
