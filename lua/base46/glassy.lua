@@ -252,6 +252,10 @@ M.BlinkCmpMenuBorder = { fg = colors.grey, bg = "NONE" }
 M.BlinkCmpDocBorder = { fg = colors.grey, bg = "NONE" }
 M.BlinkCmpSignatureHelpBorder = { fg = colors.grey, bg = "NONE" }
 
+-- lazy.nvim tabs: keep the labels readable on a transparent background
+M.LazyButton = { bg = "NONE", fg = colors.white }
+M.LazyButtonActive = { bg = colors.grey, fg = colors.white }
+
 M.NoiceCmdlinePopupBorder = { fg = colors.grey, bg = "NONE" }
 M.NoiceCmdlinePopupBorderSearch = { fg = colors.grey, bg = "NONE" }
 
