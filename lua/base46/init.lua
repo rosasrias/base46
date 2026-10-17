@@ -252,9 +252,17 @@ M.toggle_transparency = function()
   M.load_all_highlights()
 
   package.loaded.chadrc = nil
-  local old = require("chadrc").base46.transparency
+  local ok, chadrc = pcall(require, "chadrc")
+  local old = ok and chadrc.base46 and chadrc.base46.transparency
   local new = "transparency = " .. tostring(opts.transparency)
-  require("nvchad.utils").replace_word("transparency = " .. tostring(old), new)
+  local utils = require "nvchad.utils"
+
+  if old == nil then
+    -- chadrc has no transparency key yet, add it inside the base46 table
+    utils.insert_line("base46%s*=%s*{", "\ttransparency = " .. tostring(opts.transparency) .. ",")
+  else
+    utils.replace_word("transparency = " .. tostring(old), new)
+  end
 end
 
 return M
