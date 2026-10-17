@@ -66,7 +66,6 @@ local defaults = {
   -- lazy.nvim
   LazyH1 = { bg = colors.green, fg = colors.black },
   LazyButton = { bg = colors.one_bg, fg = lighten(colors.light_grey, vim.o.bg == "dark" and 10 or -20) },
-  LazyButtonActive = { bg = colors.grey },
   LazyH2 = { fg = colors.red, bold = true, underline = true },
   LazyReasonPlugin = { fg = colors.red },
   LazyValue = { fg = colors.teal },
