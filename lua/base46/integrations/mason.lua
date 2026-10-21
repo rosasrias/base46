@@ -1,6 +1,7 @@
 local colors = require("base46").get_theme_tb "base_30"
+local opts = require("base46").get_options "base46"
 
-return {
+local highlights = {
   MasonHeader = { bg = colors.red, fg = colors.black },
   MasonHighlight = { fg = colors.blue },
   MasonHighlightBlock = { fg = colors.black, bg = colors.green },
@@ -9,3 +10,22 @@ return {
   MasonMuted = { fg = colors.light_grey },
   MasonMutedBlock = { fg = colors.light_grey, bg = colors.one_bg },
 }
+
+if opts.transparency then
+  highlights = vim.tbl_deep_extend("force", highlights, {
+    MasonNormal = { bg = "NONE" },
+    MasonNormalFloat = { bg = "NONE" },
+    MasonBorder = { link = "FloatBorder" },
+    MasonFloatBorder = { link = "FloatBorder" },
+    MasonMutedBlock = { fg = colors.light_grey, bg = "NONE" },
+  })
+else
+  highlights = vim.tbl_deep_extend("force", highlights, {
+    MasonNormal = { bg = colors.darker_black },
+    MasonNormalFloat = { bg = colors.darker_black },
+    MasonBorder = { fg = colors.grey_fg },
+    MasonFloatBorder = { fg = colors.grey_fg },
+  })
+end
+
+return highlights
