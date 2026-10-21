@@ -151,6 +151,10 @@ local transparent_groups = {
   "NoiceCmdlinePopup",
   "NoiceCmdlinePopupTitle",
 
+  -- Mason
+  "MasonNormal",
+  "MasonNormalFloat",
+
   -- Notifications
   "NotifyBackground",
   "NotifyINFOBorder",
@@ -254,5 +258,11 @@ M.BlinkCmpSignatureHelpBorder = { fg = colors.grey, bg = "NONE" }
 
 M.NoiceCmdlinePopupBorder = { fg = colors.grey, bg = "NONE" }
 M.NoiceCmdlinePopupBorderSearch = { fg = colors.grey, bg = "NONE" }
+
+-- Mason
+M.MasonBorder = { fg = colors.grey, bg = "NONE" }
+M.MasonFloatBorder = { fg = colors.grey, bg = "NONE" }
+M.MasonNormal = { bg = "NONE" }
+M.MasonNormalFloat = { bg = "NONE" }
 
 return M
