@@ -378,7 +378,6 @@ M.polish_hl = {
 
     ["@markup.quote"] = {
       fg = "#A8547A",
-      bg = opts.transparency and nil or base30.black2,
     },
 
     -- Comments
