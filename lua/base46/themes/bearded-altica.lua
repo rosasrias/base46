@@ -145,7 +145,7 @@ M.polish_hl = {
       italic = true,
     },
 
-    ["@punctuation"] = { fg = "#C2CED166" },
+    ["@punctuation"] = { fg = "#C2CED1" },
 
     ["@error"] = { fg = "#C13838" },
     ["@exception"] = { fg = "#C13838" },
