@@ -309,11 +309,11 @@ M.polish_hl = {
 
     -- Operators
     ["@operator"] = { fg = "#c93e71" },
-    ["@reference"] = { fg = "#bacbe466" },
+    ["@reference"] = { fg = "#546174" },
 
     -- Punctuation
-    ["@punctuation.bracket"] = { fg = "#bacbe466" },
-    ["@punctuation.delimiter"] = { fg = "#bacbe466" },
+    ["@punctuation.bracket"] = { fg = "#546174" },
+    ["@punctuation.delimiter"] = { fg = "#546174" },
 
     -- Symbols
     ["@symbol"] = { fg = "#c93e71" },
