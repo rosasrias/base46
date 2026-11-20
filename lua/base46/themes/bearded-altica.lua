@@ -1,5 +1,4 @@
-﻿
--- Bearded Theme Altica
+﻿-- Bearded Theme Altica
 -- Ported to NvChad Base46
 ---@type Base46Table
 local M = {}
@@ -103,6 +102,11 @@ M.polish_hl = {
 
   -- TREESITTER
   treesitter = {
+    typescriptBlock = { fg = "#d5724d" },
+    typescriptImport = { fg = "#d6aa5d" },
+    typescriptVariableDeclaration  = {fg = "#d5724d"},
+    typescriptIdentifierName = {fg = "#10bcc8"},
+
     ["@variable"] = { fg = "#D6724D" },
     ["@variable.builtin"] = { fg = "#0187A6" },
     ["@variable.parameter"] = { fg = "#A8547A" },
