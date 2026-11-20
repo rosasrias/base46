@@ -13,7 +13,7 @@ local defaults = {
   PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
   PmenuThumb = { bg = colors.grey },
   MatchParen = { link = "MatchWord" },
-  Comment = { fg = colors.light_grey },
+  Comment = { fg = colors.grey_fg },
   CursorLineNr = { fg = colors.nord_blue },
   LineNr = { fg = colors.grey },
   FloatBorder = { fg = colors.darker_black, bg = colors.darker_black },

@@ -14,7 +14,6 @@ local highlights = {
   BlinkCmpScrollBarGutter = { bg = colors.black2 },
   BlinkCmpLabel = { fg = colors.white },
   BlinkCmpLabelDeprecated = { fg = colors.red, strikethrough = true },
-  BlinkCmpLabelMatch = { fg = colors.blue, bold = true },
   BlinkCmpLabelDetail = { fg = colors.light_grey },
   BlinkCmpLabelDescription = { fg = colors.light_grey },
   BlinkCmpSource = { fg = colors.grey_fg },
@@ -34,14 +33,14 @@ local kinds = {
   Function = base16.base0D,
   Identifier = base16.base08,
   Field = base16.base08,
-  Variable = base16.base0E,
+  Variable = base16.base05,
   Snippet = colors.red,
   Text = base16.base0B,
   Structure = base16.base0E,
   Type = base16.base0A,
-  Keyword = base16.base07,
+  Keyword = base16.base0E,
   Method = base16.base0D,
-  Constructor = colors.blue,
+  Constructor = base16.base0C,
   Folder = base16.base07,
   Module = base16.base0A,
   Property = base16.base08,
@@ -125,6 +124,10 @@ if cmp_ui.style == "atom_colored" then
       bg = mixcolors(fg, colors.black, 70),
     }
   end
+end
+
+if cmp_ui.match == true then
+   highlights.BlinkCmpLabelMatch = {fg = colors.blue, bold = true} 
 end
 
 -- merge style overrides
