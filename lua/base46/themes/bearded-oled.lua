@@ -1,140 +1,414 @@
-﻿-- Ported from Bearded Theme v10.1.0 (bearded-theme-oled.json)
--- https://github.com/BeardedBear/bearded-theme
-
+-- Bearded Theme Oled
+-- Original: BeardedTheme Oled (bearded-theme-oled.json)
+-- Ported to NvChad Base46
+---@type Base46Table
 local M = {}
 
+-- UI COLORS
 M.base_30 = {
-  white = "#b3b3b3",
+  white = "#e6e6e6",
   darker_black = "#000000",
-  black = "#000000", -- nvim bg (editor.background)
+  black = "#000000",
   black2 = "#060606",
   one_bg = "#151515",
-  one_bg2 = "#000000",
-  one_bg3 = "#151515",
-  grey = "#333333",
-  grey_fg = "#333333",
-  grey_fg2 = "#999999",
-  light_grey = "#2f2f2f",
+  one_bg2 = "#0d0d0d",
+  one_bg3 = "#1a1a1a",
+  grey = "#515151",
+  grey_fg = "#515151",
+  grey_fg2 = "#7b7b7b",
+  light_grey = "#959595",
   red = "#E87474",
-  baby_pink = "#E48CC5",
-  pink = "#f977cb",
-  line = "#262626", -- for lines like vertsplit
+  baby_pink = "#DE8199",
+  pink = "#E48CC5",
+  line = "#1a1a1a",
   green = "#5CD4C3",
   vibrant_green = "#3df3d9",
-  nord_blue = "#63BBE5",
-  blue = "#49c4ff",
+  nord_blue = "#6EA7E8",
+  blue = "#688eff",
+  seablue = "#63BBE5",
   yellow = "#E0CF77",
   sun = "#f9e05e",
-  purple = "#f977cb",
+  purple = "#B69EDE",
   dark_purple = "#E48CC5",
-  teal = "#6AD3CD",
-  orange = "#ff5d5d",
-  cyan = "#4df0e7",
+  teal = "#63BBE5",
+  orange = "#DE8199",
+  cyan = "#63BBE5",
   statusline_bg = "#000000",
-  lightbg = "#000000",
+  lightbg = "#151515",
   pmenu_bg = "#688eff",
-  folder_bg = "#63BBE5",
-  variable_fg = "#DE8199", -- tokenColors variable
-  type_fg = "#B69EDE", -- tokenColors entity.name.type
-  storage_fg = "#B69EDE", -- tokenColors storage.type
-  comment_fg = "#515151", -- tokenColors comment
-  number_fg = "#E79E69", -- tokenColors constant.numeric
+  folder_bg = "#688eff",
 }
 
+-- BASE16 COLORS
 M.base_16 = {
-  base00 = "#000000", -- background
-  base01 = "#060606", -- darker line numbers
-  base02 = "#151515", -- selection bg
-  base03 = "#333333", -- comments
-  base04 = "#999999", -- dark defaults
-  base05 = "#b3b3b3", -- default foreground
-  base06 = "#2f2f2f", -- light defaults
-  base07 = "#ffffff", -- lightest
-  base08 = "#E87474", -- red (constants, errors)
-  base09 = "#ff5d5d", -- orange (numbers, builtins)
-  base0A = "#E0CF77", -- yellow (keywords)
-  base0B = "#5CD4C3", -- green (strings)
-  base0C = "#4df0e7", -- cyan
-  base0D = "#49c4ff", -- blue (functions)
-  base0E = "#E0CF77", -- keywords
-  base0F = "#E87474", -- variables
+  base00 = "#000000",
+  base01 = "#060606",
+  base02 = "#151515",
+  base03 = "#515151",
+  base04 = "#7b7b7b",
+  base05 = "#b3b3b3",
+  base06 = "#e1e1e1",
+  base07 = "#e6e6e6",
+  base08 = "#E87474",
+  base09 = "#DE8199",
+  base0A = "#E0CF77",
+  base0B = "#5CD4C3",
+  base0C = "#63BBE5",
+  base0D = "#688eff",
+  base0E = "#B69EDE",
+  base0F = "#E48CC5",
 }
 
+-- POLISH HIGHLIGHTS
+M.polish_hl = {
+
+  -- DEFAULTS / VIM SYNTAX
+  defaults = {
+    -- Editor
+    Normal = {
+      fg = "#b3b3b3",
+      bg = "#000000",
+    },
+    NormalNC = {
+      fg = "#b3b3b3",
+      bg = "#000000",
+    },
+    NormalFloat = {
+      fg = "#b3b3b3",
+      bg = "#151515",
+    },
+    FloatBorder = {
+      fg = "#1a1a1a",
+      bg = "#151515",
+    },
+    WinSeparator = { fg = "#262626" },
+    CursorLine = { bg = "#151515" },
+    Visual = { bg = "#2f2f2f" },
+    LineNr = { fg = "#2a2f2c" },
+    CursorLineNr = { fg = "#808080" },
+    Search = {
+      fg = "#b3b3b3",
+      bg = "#688eff",
+    },
+    IncSearch = {
+      fg = "#000000",
+      bg = "#E0CF77",
+    },
+    MatchParen = {
+      fg = "#63BBE5",
+      bg = "#1a1a1a",
+      bold = true,
+    },
+
+    -- Comments
+    Comment = {
+      fg = "#515151",
+      italic = true,
+    },
+
+    -- Syntax
+    Boolean = { fg = "#E87474" },
+    Character = { fg = "#5CD4C3" },
+    Conditional = { fg = "#E0CF77" },
+    Constant = { fg = "#E87474" },
+    Define = {
+      fg = "#E0CF77",
+      sp = "none",
+    },
+    Delimiter = { fg = "#b3b3b3" },
+    Float = { fg = "#E79E69" },
+    Variable = { fg = "#DE8199" },
+    Function = { fg = "#63BBE5" },
+    Identifier = {
+      fg = "#DE8199",
+      sp = "none",
+    },
+    Include = { fg = "#E0CF77" },
+    Keyword = { fg = "#E0CF77" },
+    Label = { fg = "#E0CF77" },
+    Number = { fg = "#E79E69" },
+    Operator = {
+      fg = "#E0CF77",
+      sp = "none",
+    },
+    PreProc = { fg = "#E0CF77" },
+    Repeat = { fg = "#E0CF77" },
+    Special = { fg = "#E79E69" },
+    SpecialChar = { fg = "#E79E69" },
+    Statement = { fg = "#E0CF77" },
+    StorageClass = { fg = "#6AD3CD" },
+    String = { fg = "#5CD4C3" },
+    Structure = { fg = "#B69EDE" },
+    Tag = { fg = "#63BBE5" },
+    Todo = {
+      fg = "#E0CF77",
+      bg = "#060606",
+      bold = true,
+    },
+    Type = {
+      fg = "#B69EDE",
+      sp = "none",
+    },
+    Typedef = { fg = "#B69EDE" },
+
+    -- Diagnostics
+    Error = { fg = "#E87474" },
+    ErrorMsg = { fg = "#E87474" },
+    WarningMsg = { fg = "#E0CF77" },
+    DiagnosticError = { fg = "#E87474" },
+    DiagnosticWarn = { fg = "#E0CF77" },
+    DiagnosticInfo = { fg = "#63BBE5" },
+    DiagnosticHint = { fg = "#688eff" },
+    DiagnosticUnderlineError = {
+      undercurl = true,
+      sp = "#E87474",
+    },
+    DiagnosticUnderlineWarn = {
+      undercurl = true,
+      sp = "#E0CF77",
+    },
+    DiagnosticUnderlineInfo = {
+      undercurl = true,
+      sp = "#63BBE5",
+    },
+    DiagnosticUnderlineHint = {
+      undercurl = true,
+      sp = "#688eff",
+    },
+
+    -- Diff
+    Added = { fg = "#5cd4c3" },
+    Changed = { fg = "#63BBE5" },
+    Removed = { fg = "#E87474" },
+    DiffAdd = { fg = "#5cd4c3" },
+    DiffChange = { fg = "#63BBE5" },
+    DiffDelete = { fg = "#E87474" },
+    DiffText = {
+      fg = "#b3b3b3",
+      bg = "#2f2f2f",
+    },
+
+    -- Completion
+    Pmenu = {
+      fg = "#b3b3b3",
+      bg = "#151515",
+    },
+    PmenuSel = {
+      fg = "#000000",
+      bg = "#688eff",
+    },
+    PmenuSbar = { bg = "#1a1a1a" },
+    PmenuThumb = { bg = "#688eff" },
+  },
+
+  -- SYNTAX (classic vim syntax groups)
+  syntax = {
+    Boolean = { fg = "#E87474" },
+    Character = { fg = "#5CD4C3" },
+    Conditional = { fg = "#E0CF77" },
+    Constant = { fg = "#E87474" },
+    Define = {
+      fg = "#E0CF77",
+      sp = "none",
+    },
+    Delimiter = { fg = "#b3b3b3" },
+    Float = { fg = "#E79E69" },
+    Variable = { fg = "#DE8199" },
+    Function = { fg = "#63BBE5" },
+    Identifier = {
+      fg = "#DE8199",
+      sp = "none",
+    },
+    Include = { fg = "#E0CF77" },
+    Keyword = { fg = "#E0CF77" },
+    Label = { fg = "#E0CF77" },
+    Number = { fg = "#E79E69" },
+    Operator = {
+      fg = "#E0CF77",
+      sp = "none",
+    },
+    PreProc = { fg = "#E0CF77" },
+    Repeat = { fg = "#E0CF77" },
+    Special = { fg = "#E79E69" },
+    SpecialChar = { fg = "#E79E69" },
+    Statement = { fg = "#E0CF77" },
+    StorageClass = { fg = "#6AD3CD" },
+    String = { fg = "#5CD4C3" },
+    Structure = { fg = "#B69EDE" },
+    Tag = { fg = "#63BBE5" },
+    Todo = {
+      fg = "#E0CF77",
+      bg = "#060606",
+      bold = true,
+    },
+    Type = {
+      fg = "#B69EDE",
+      sp = "none",
+    },
+    Typedef = { fg = "#B69EDE" },
+  },
+
+  -- TREESITTER
+  treesitter = {
+    -- Variables
+    ["@variable"] = { fg = "#DE8199" },
+    ["@variable.builtin"] = { fg = "#E79E69" },
+    ["@variable.parameter"] = { fg = "#E48CC5" },
+    ["@variable.member"] = { fg = "#E79E69" },
+    ["@variable.member.key"] = { fg = "#E79E69" },
+
+    -- Modules
+    ["@module"] = { fg = "#E79E69" },
+
+    -- Constants
+    ["@constant"] = { fg = "#E87474" },
+    ["@constant.builtin"] = { fg = "#E87474" },
+    ["@constant.macro"] = { fg = "#E87474" },
+
+    -- Strings
+    ["@string"] = { fg = "#5CD4C3" },
+    ["@string.regex"] = { fg = "#688eff" },
+    ["@string.escape"] = { fg = "#688eff" },
+    ["@character"] = { fg = "#5CD4C3" },
+
+    -- Numbers
+    ["@number"] = { fg = "#E79E69" },
+    ["@number.float"] = { fg = "#E79E69" },
+
+    -- Attributes
+    ["@annotation"] = { fg = "#E48CC5" },
+    ["@attribute"] = { fg = "#E0CF77" },
+
+    -- Errors
+    ["@error"] = { fg = "#E87474" },
+
+    -- Keywords
+    ["@keyword.exception"] = { fg = "#E87474" },
+    ["@keyword"] = { fg = "#E0CF77" },
+    ["@keyword.function"] = { fg = "#E0CF77" },
+    ["@keyword.return"] = { fg = "#E0CF77" },
+    ["@keyword.operator"] = { fg = "#E0CF77" },
+    ["@keyword.import"] = { fg = "#E0CF77" },
+    ["@keyword.conditional"] = { fg = "#E0CF77" },
+    ["@keyword.conditional.ternary"] = { fg = "#E0CF77" },
+    ["@keyword.repeat"] = { fg = "#E0CF77" },
+    ["@keyword.storage"] = { fg = "#6AD3CD" },
+    ["@keyword.directive.define"] = { fg = "#E0CF77" },
+    ["@keyword.directive"] = { fg = "#E0CF77" },
+
+    -- Functions
+    ["@function"] = { fg = "#63BBE5" },
+    ["@function.builtin"] = { fg = "#63BBE5" },
+    ["@function.macro"] = { fg = "#63BBE5" },
+    ["@function.call"] = { fg = "#63BBE5" },
+    ["@function.method"] = { fg = "#63BBE5" },
+    ["@function.method.call"] = { fg = "#63BBE5" },
+
+    -- Constructors
+    ["@constructor"] = { fg = "#B69EDE" },
+
+    -- Operators
+    ["@operator"] = { fg = "#E0CF77" },
+    ["@reference"] = { fg = "#b3b3b366" },
+
+    -- Punctuation
+    ["@punctuation.bracket"] = { fg = "#b3b3b366" },
+    ["@punctuation.delimiter"] = { fg = "#b3b3b366" },
+
+    -- Symbols
+    ["@symbol"] = { fg = "#688eff" },
+
+    -- Tags
+    ["@tag"] = { fg = "#63BBE5" },
+    ["@tag.attribute"] = { fg = "#E0CF77" },
+    ["@tag.delimiter"] = { fg = "#63bbe5" },
+
+    -- Text
+    ["@text"] = { fg = "#b3b3b3" },
+    ["@text.emphasis"] = {
+      fg = "#E79E69",
+      italic = true,
+    },
+    ["@text.strike"] = {
+      fg = "#E87474",
+      strikethrough = true,
+    },
+
+    -- Types
+    ["@type"] = { fg = "#B69EDE" },
+    ["@type.builtin"] = { fg = "#B69EDE" },
+
+    -- Definitions
+    ["@definition"] = {
+      sp = "#959595",
+      underline = true,
+    },
+    ["@scope"] = { bold = true },
+
+    -- Properties
+    ["@property"] = { fg = "#E79E69" },
+    ["@field"] = { fg = "#E79E69" },
+    ["@namespace"] = { fg = "#63BBE5" },
+
+    -- Markup
+    ["@markup.heading"] = { fg = "#E0CF77" },
+    ["@markup.raw"] = { fg = "#B69EDE" },
+    ["@markup.link"] = { fg = "#63BBE5" },
+    ["@markup.link.url"] = {
+      fg = "#63BBE5",
+      underline = true,
+    },
+    ["@markup.link.label"] = { fg = "#688eff" },
+    ["@markup.list"] = { fg = "#63BBE5" },
+    ["@markup.strong"] = {
+      fg = "#DE8199",
+      bold = true,
+    },
+    ["@markup.underline"] = { underline = true },
+    ["@markup.italic"] = {
+      fg = "#E79E69",
+      italic = true,
+    },
+    ["@markup.strikethrough"] = {
+      fg = "#E87474",
+      strikethrough = true,
+    },
+    ["@markup.quote"] = { fg = "#E48CC5" },
+
+    -- Comments
+    ["@comment"] = {
+      fg = "#515151",
+      italic = true,
+    },
+    ["@comment.todo"] = {
+      fg = "#E0CF77",
+      bg = "#060606",
+      bold = true,
+    },
+    ["@comment.warning"] = {
+      fg = "#000000",
+      bg = "#E0CF77",
+    },
+    ["@comment.note"] = {
+      fg = "#000000",
+      bg = "#688eff",
+    },
+    ["@comment.danger"] = {
+      fg = "#060606",
+      bg = "#E87474",
+    },
+
+    -- Diff
+    ["@diff.plus"] = { fg = "#5cd4c3" },
+    ["@diff.minus"] = { fg = "#E87474" },
+    ["@diff.delta"] = { fg = "#63BBE5" },
+  },
+}
+
+-- THEME TYPE
 M.type = "dark"
 
-M.polish_hl = {
-  defaults = {
-    Comment = { fg = M.base_30.comment_fg },
-    CursorLineNr = { fg = M.base_30.yellow },
-    LineNr = { fg = M.base_30.comment_fg },
-  },
-  syntax = {
-    Include = { fg = M.base_30.yellow },
-    Keyword = { fg = M.base_30.yellow },
-    Identifier = { fg = M.base_30.variable_fg },
-    Type = { fg = M.base_30.type_fg },
-    String = { fg = M.base_30.green },
-    Constant = { fg = M.base_30.number_fg },
-    Number = { fg = M.base_30.number_fg },
-    Function = { fg = M.base_30.nord_blue },
-    Statement = { fg = M.base_30.yellow },
-    PreProc = { fg = M.base_30.yellow },
-    TypeDef = { fg = M.base_30.type_fg },
-    Define = { fg = M.base_30.yellow },
-  },
-  treesitter = {
-    Include = { fg = M.base_30.yellow },
-    ["@comment"] = { fg = M.base_30.comment_fg },
-    ["@variable"] = { fg = M.base_30.variable_fg },
-    ["@variable.parameter"] = { fg = M.base_30.baby_pink },
-    ["@variable.builtin"] = { fg = M.base_30.number_fg },
-    ["@variable.member"] = { fg = M.base_30.variable_fg },
-    ["@constant"] = { fg = M.base_30.red },
-    ["@constant.builtin"] = { fg = M.base_30.red },
-    ["@string"] = { fg = M.base_30.green },
-    ["@string.regex"] = { fg = M.base_30.cyan },
-    ["@string.escape"] = { fg = M.base_30.cyan },
-    ["@number"] = { fg = M.base_30.number_fg },
-    ["@keyword"] = { fg = M.base_30.yellow },
-    ["@keyword.function"] = { fg = M.base_30.yellow },
-    ["@keyword.conditional"] = { fg = M.base_30.yellow },
-    ["@keyword.repeat"] = { fg = M.base_30.yellow },
-    ["@keyword.return"] = { fg = M.base_30.yellow },
-    ["@keyword.operator"] = { fg = M.base_30.white },
-    ["@keyword.import"] = { fg = M.base_30.yellow },
-    ["@keyword.storage"] = { fg = M.base_30.type_fg },
-    ["@keyword.directive"] = { fg = M.base_30.yellow },
-    ["@keyword.exception"] = { fg = M.base_30.red },
-    ["@keyword.conditional.ternary"] = { fg = M.base_30.yellow },
-    ["@function"] = { fg = M.base_30.nord_blue },
-    ["@function.call"] = { fg = M.base_30.nord_blue },
-    ["@function.method"] = { fg = M.base_30.nord_blue },
-    ["@function.method.call"] = { fg = M.base_30.nord_blue },
-    ["@function.builtin"] = { fg = M.base_30.nord_blue },
-    ["@constructor"] = { fg = M.base_30.nord_blue },
-    ["@type"] = { fg = M.base_30.type_fg },
-    ["@type.builtin"] = { fg = M.base_30.type_fg },
-    ["@property"] = { fg = M.base_30.white },
-    ["@tag"] = { fg = M.base_30.nord_blue },
-    ["@tag.attribute"] = { fg = M.base_30.yellow },
-    ["@tag.delimiter"] = { fg = M.base_30.nord_blue },
-    ["@attribute"] = { fg = M.base_30.yellow },
-    ["@punctuation.bracket"] = { fg = M.base_30.white },
-    ["@punctuation.delimiter"] = { fg = M.base_30.white },
-    ["@operator"] = { fg = M.base_30.white },
-    ["@module"] = { fg = M.base_30.number_fg },
-    ["@text"] = { fg = M.base_30.grey_fg2 },
-    ["@markup.heading"] = { fg = M.base_30.yellow },
-    ["@markup.bold"] = { fg = M.base_30.variable_fg },
-    ["@markup.italic"] = { fg = M.base_30.number_fg },
-    ["@markup.quote"] = { fg = M.base_30.baby_pink },
-    ["@markup.link"] = { fg = M.base_30.nord_blue },
-    ["@markup.raw"] = { fg = M.base_30.type_fg },
-    ["@diff.plus"] = { fg = M.base_30.green },
-    ["@diff.minus"] = { fg = M.base_30.red },
-  },
-}
-
+-- BASE46 OVERRIDE
 M = require("base46").override_theme(M, "bearded-oled")
 
 return M
