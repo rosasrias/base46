@@ -140,7 +140,7 @@ M.polish_hl = {
       sp = "none",
     },
 
-    Delimiter = { fg = "#C2CED166" },
+    Delimiter = { fg = "#C2CED1" },
     Float = { fg = "#0187A6" },
     Variable = { fg = "#D6724D" },
     Function = { fg = "#10BDC9" },
