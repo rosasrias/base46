@@ -11,9 +11,9 @@ M.base_30 = {
   one_bg = "#231e36",
   one_bg2 = "#100e1a",
   one_bg3 = "#231e36",
-  grey = "#06050a",
-  grey_fg = "#bfb9da",
-  grey_fg2 = "#39325c",
+  grey = "#39325c",
+  grey_fg = "#39325c",
+  grey_fg2 = "#bfb9da",
   light_grey = "#383057",
   red = "#f7775a",
   baby_pink = "#fda7f7",
@@ -34,79 +34,104 @@ M.base_30 = {
   lightbg = "#0d0a14",
   pmenu_bg = "#544782",
   folder_bg = "#8ad0ff",
+  variable_fg = "#ff8ea0", -- tokenColors variable
+  type_fg = "#c39eff", -- tokenColors entity.name.type
+  storage_fg = "#c39eff", -- tokenColors storage.type
+  comment_fg = "#585775", -- tokenColors comment
+  number_fg = "#ffae82", -- tokenColors constant.numeric
 }
 
 M.base_16 = {
-  base00 = "#14111f",
-  base01 = "#191627",
-  base02 = "#231e36",
-  base03 = "#06050a",
-  base04 = "#39325c",
-  base05 = "#bfb9da",
-  base06 = "#383057",
-  base07 = "#bdb6d3",
-  base08 = "#f7775a",
-  base09 = "#ff7252",
-  base0A = "#fce38a",
-  base0B = "#5fee9b",
-  base0C = "#3dffef",
-  base0D = "#8ad0ff",
-  base0E = "#fda7f7",
-  base0F = "#fda7f7",
+  base00 = "#14111f", -- background
+  base01 = "#191627", -- darker line numbers
+  base02 = "#231e36", -- selection bg
+  base03 = "#39325c", -- comments
+  base04 = "#bfb9da", -- dark defaults
+  base05 = "#bdb6d3", -- default foreground
+  base06 = "#383057", -- light defaults
+  base07 = "#ffffff", -- lightest
+  base08 = "#f7775a", -- red (constants, errors)
+  base09 = "#ff7252", -- orange (numbers, builtins)
+  base0A = "#fce38a", -- yellow (keywords)
+  base0B = "#5fee9b", -- green (strings)
+  base0C = "#3dffef", -- cyan
+  base0D = "#8ad0ff", -- blue (functions)
+  base0E = "#fce38a", -- keywords
+  base0F = "#f7775a", -- variables
 }
 
 M.type = "dark"
 
 M.polish_hl = {
+  defaults = {
+    Comment = { fg = M.base_30.comment_fg },
+    CursorLineNr = { fg = M.base_30.yellow },
+    LineNr = { fg = M.base_30.comment_fg },
+  },
+  syntax = {
+    Include = { fg = M.base_30.yellow },
+    Keyword = { fg = M.base_30.yellow },
+    Identifier = { fg = M.base_30.variable_fg },
+    Type = { fg = M.base_30.type_fg },
+    String = { fg = M.base_30.green },
+    Constant = { fg = M.base_30.number_fg },
+    Number = { fg = M.base_30.number_fg },
+    Function = { fg = M.base_30.nord_blue },
+    Statement = { fg = M.base_30.yellow },
+    PreProc = { fg = M.base_30.yellow },
+    TypeDef = { fg = M.base_30.type_fg },
+    Define = { fg = M.base_30.yellow },
+  },
   treesitter = {
-    ["@comment"] = { fg = "#585775" },
-    ["@variable"] = { fg = "#ff8ea0" },
-    ["@variable.parameter"] = { fg = "#fda7f7" },
-    ["@variable.builtin"] = { fg = "#ffae82" },
-    ["@variable.member"] = { fg = "#ff8ea0" },
-    ["@constant"] = { fg = "#f7775a" },
-    ["@constant.builtin"] = { fg = "#f7775a" },
-    ["@string"] = { fg = "#5fee9b" },
-    ["@string.regex"] = { fg = "#3dffef" },
-    ["@string.escape"] = { fg = "#3dffef" },
-    ["@number"] = { fg = "#ffae82" },
-    ["@keyword"] = { fg = "#fce38a" },
-    ["@keyword.function"] = { fg = "#fce38a" },
-    ["@keyword.conditional"] = { fg = "#fce38a" },
-    ["@keyword.repeat"] = { fg = "#fce38a" },
-    ["@keyword.return"] = { fg = "#fce38a" },
-    ["@keyword.operator"] = { fg = "#bdb6d3" },
-    ["@keyword.import"] = { fg = "#fce38a" },
-    ["@keyword.storage"] = { fg = "#c39eff" },
-    ["@keyword.directive"] = { fg = "#fce38a" },
-    ["@keyword.exception"] = { fg = "#f7775a" },
-    ["@keyword.conditional.ternary"] = { fg = "#fce38a" },
-    ["@function"] = { fg = "#8ad0ff" },
-    ["@function.call"] = { fg = "#8ad0ff" },
-    ["@function.method"] = { fg = "#8ad0ff" },
-    ["@function.method.call"] = { fg = "#8ad0ff" },
-    ["@function.builtin"] = { fg = "#8ad0ff" },
-    ["@constructor"] = { fg = "#8ad0ff" },
-    ["@type"] = { fg = "#c39eff" },
-    ["@type.builtin"] = { fg = "#c39eff" },
-    ["@property"] = { fg = "#bdb6d3" },
-    ["@tag"] = { fg = "#8ad0ff" },
-    ["@tag.attribute"] = { fg = "#fce38a" },
-    ["@tag.delimiter"] = { fg = "#8ad0ff" },
-    ["@attribute"] = { fg = "#fce38a" },
-    ["@punctuation.bracket"] = { fg = "#bdb6d3" },
-    ["@punctuation.delimiter"] = { fg = "#bdb6d3" },
-    ["@operator"] = { fg = "#bdb6d3" },
-    ["@module"] = { fg = "#ffae82" },
-    ["@text"] = { fg = "#bfb9da" },
-    ["@markup.heading"] = { fg = "#fce38a" },
-    ["@markup.bold"] = { fg = "#ff8ea0" },
-    ["@markup.italic"] = { fg = "#ffae82" },
-    ["@markup.quote"] = { fg = "#fda7f7" },
-    ["@markup.link"] = { fg = "#8ad0ff" },
-    ["@markup.raw"] = { fg = "#c39eff" },
-    ["@diff.plus"] = { fg = "#5fee9b" },
-    ["@diff.minus"] = { fg = "#f7775a" },
+    Include = { fg = M.base_30.yellow },
+    ["@comment"] = { fg = M.base_30.comment_fg },
+    ["@variable"] = { fg = M.base_30.variable_fg },
+    ["@variable.parameter"] = { fg = M.base_30.baby_pink },
+    ["@variable.builtin"] = { fg = M.base_30.number_fg },
+    ["@variable.member"] = { fg = M.base_30.variable_fg },
+    ["@constant"] = { fg = M.base_30.red },
+    ["@constant.builtin"] = { fg = M.base_30.red },
+    ["@string"] = { fg = M.base_30.green },
+    ["@string.regex"] = { fg = M.base_30.cyan },
+    ["@string.escape"] = { fg = M.base_30.cyan },
+    ["@number"] = { fg = M.base_30.number_fg },
+    ["@keyword"] = { fg = M.base_30.yellow },
+    ["@keyword.function"] = { fg = M.base_30.yellow },
+    ["@keyword.conditional"] = { fg = M.base_30.yellow },
+    ["@keyword.repeat"] = { fg = M.base_30.yellow },
+    ["@keyword.return"] = { fg = M.base_30.yellow },
+    ["@keyword.operator"] = { fg = M.base_30.white },
+    ["@keyword.import"] = { fg = M.base_30.yellow },
+    ["@keyword.storage"] = { fg = M.base_30.type_fg },
+    ["@keyword.directive"] = { fg = M.base_30.yellow },
+    ["@keyword.exception"] = { fg = M.base_30.red },
+    ["@keyword.conditional.ternary"] = { fg = M.base_30.yellow },
+    ["@function"] = { fg = M.base_30.nord_blue },
+    ["@function.call"] = { fg = M.base_30.nord_blue },
+    ["@function.method"] = { fg = M.base_30.nord_blue },
+    ["@function.method.call"] = { fg = M.base_30.nord_blue },
+    ["@function.builtin"] = { fg = M.base_30.nord_blue },
+    ["@constructor"] = { fg = M.base_30.nord_blue },
+    ["@type"] = { fg = M.base_30.type_fg },
+    ["@type.builtin"] = { fg = M.base_30.type_fg },
+    ["@property"] = { fg = M.base_30.white },
+    ["@tag"] = { fg = M.base_30.nord_blue },
+    ["@tag.attribute"] = { fg = M.base_30.yellow },
+    ["@tag.delimiter"] = { fg = M.base_30.nord_blue },
+    ["@attribute"] = { fg = M.base_30.yellow },
+    ["@punctuation.bracket"] = { fg = M.base_30.white },
+    ["@punctuation.delimiter"] = { fg = M.base_30.white },
+    ["@operator"] = { fg = M.base_30.white },
+    ["@module"] = { fg = M.base_30.number_fg },
+    ["@text"] = { fg = M.base_30.grey_fg2 },
+    ["@markup.heading"] = { fg = M.base_30.yellow },
+    ["@markup.bold"] = { fg = M.base_30.variable_fg },
+    ["@markup.italic"] = { fg = M.base_30.number_fg },
+    ["@markup.quote"] = { fg = M.base_30.baby_pink },
+    ["@markup.link"] = { fg = M.base_30.nord_blue },
+    ["@markup.raw"] = { fg = M.base_30.type_fg },
+    ["@diff.plus"] = { fg = M.base_30.green },
+    ["@diff.minus"] = { fg = M.base_30.red },
   },
 }
 
