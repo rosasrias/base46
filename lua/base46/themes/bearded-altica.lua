@@ -419,6 +419,6 @@ M.polish_hl = {
 M.type = "dark"
 
 -- BASE46 OVERRIDE
-M = require("base46").override_theme(M, "bearded_altica")
+M = require("base46").override_theme(M, "bearded-altica")
 
 return M
