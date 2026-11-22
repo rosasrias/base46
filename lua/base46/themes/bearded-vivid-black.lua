@@ -64,42 +64,6 @@ M.polish_hl = {
 
   -- DEFAULTS / VIM SYNTAX
   defaults = {
-    -- Editor
-    Normal = {
-      fg = "#c5c5cb",
-      bg = "#141417",
-    },
-    NormalNC = {
-      fg = "#c5c5cb",
-      bg = "#141417",
-    },
-    NormalFloat = {
-      fg = "#c5c5cb",
-      bg = "#202025",
-    },
-    FloatBorder = {
-      fg = "#2c2c32",
-      bg = "#202025",
-    },
-    WinSeparator = { fg = "#060607" },
-    CursorLine = { bg = "#202025" },
-    Visual = { bg = "#383840" },
-    LineNr = { fg = "#373741" },
-    CursorLineNr = { fg = "#929293" },
-    Search = {
-      fg = "#c5c5cb",
-      bg = "#aaaaaa",
-    },
-    IncSearch = {
-      fg = "#141417",
-      bg = "#FFB638",
-    },
-    MatchParen = {
-      fg = "#28A9FF",
-      bg = "#2c2c32",
-      bold = true,
-    },
-
     -- Comments
     Comment = {
       fg = "#50505a",
