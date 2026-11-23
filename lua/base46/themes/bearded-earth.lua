@@ -7,7 +7,7 @@ local M = {}
 -- UI COLORS
 M.base_30 = {
   white = "#caa5a5",
-  darker_black = "#130f0f",
+  darker_black = "#1c1616",
   black = "#221b1b",
   black2 = "#292121",
   one_bg = "#40222e",
