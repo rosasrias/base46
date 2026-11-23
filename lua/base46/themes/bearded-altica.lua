@@ -66,54 +66,38 @@ M.polish_hl = {
   defaults = {
     -- Comments
     Comment = {
-      fg = "#33444b",
+      fg = "#45565c",
       italic = true,
     },
 
     -- Syntax
     Boolean = { fg = "#c13838" },
-    Character = { fg = "#14b871" },
+    Character = { fg = "#c13838" },
     Conditional = { fg = "#d6ac63" },
     Constant = { fg = "#c13838" },
-    Define = {
-      fg = "#d6ac63",
-      sp = "none",
-    },
+    Define = { fg = "#d6ac63", sp = "none" },
     Delimiter = { fg = "#c2ced1" },
-    Float = { fg = "#e61313" },
-    Variable = { fg = "#ce2e76" },
-    Function = { fg = "#04c4d9" },
-    Identifier = {
-      fg = "#ce2e76",
-      sp = "none",
-    },
+    Float = { fg = "#c13838" },
+    Variable = { fg = "#d6724d" },
+    Function = { fg = "#10bdc9" },
+    Identifier = { fg = "#d6724d", sp = "none" },
     Include = { fg = "#d6ac63" },
     Keyword = { fg = "#d6ac63" },
     Label = { fg = "#d6ac63" },
-    Number = { fg = "#e61313" },
-    Operator = {
-      fg = "#d6ac63",
-      sp = "none",
-    },
+    Number = { fg = "#c13838" },
+    Operator = { fg = "#d6ac63", sp = "none" },
     PreProc = { fg = "#d6ac63" },
     Repeat = { fg = "#d6ac63" },
-    Special = { fg = "#e61313" },
-    SpecialChar = { fg = "#e61313" },
+    Special = { fg = "#c13838" },
+    SpecialChar = { fg = "#c13838" },
     Statement = { fg = "#d6ac63" },
     StorageClass = { fg = "#0187a6" },
-    String = { fg = "#14b871" },
-    Structure = { fg = "#a8547a" },
-    Tag = { fg = "#04c4d9" },
-    Todo = {
-      fg = "#d6ac63",
-      bg = "#13232a",
-      bold = true,
-    },
-    Type = {
-      fg = "#a8547a",
-      sp = "none",
-    },
-    Typedef = { fg = "#a8547a" },
+    String = { fg = "#6bc793" },
+    Structure = { fg = "#9c8acf" },
+    Tag = { fg = "#10bdc9" },
+    Todo = { fg = "#d6ac63", bg = "#13232a", bold = true },
+    Type = { fg = "#9c8acf", sp = "none" },
+    Typedef = { fg = "#9c8acf" },
 
     -- Diagnostics
     Error = { fg = "#c13838" },
@@ -123,22 +107,10 @@ M.polish_hl = {
     DiagnosticWarn = { fg = "#d6ac63" },
     DiagnosticInfo = { fg = "#04c4d9" },
     DiagnosticHint = { fg = "#45565c" },
-    DiagnosticUnderlineError = {
-      undercurl = true,
-      sp = "#c13838",
-    },
-    DiagnosticUnderlineWarn = {
-      undercurl = true,
-      sp = "#d6ac63",
-    },
-    DiagnosticUnderlineInfo = {
-      undercurl = true,
-      sp = "#04c4d9",
-    },
-    DiagnosticUnderlineHint = {
-      undercurl = true,
-      sp = "#45565c",
-    },
+    DiagnosticUnderlineError = { undercurl = true, sp = "#c13838" },
+    DiagnosticUnderlineWarn = { undercurl = true, sp = "#d6ac63" },
+    DiagnosticUnderlineInfo = { undercurl = true, sp = "#04c4d9" },
+    DiagnosticUnderlineHint = { undercurl = true, sp = "#45565c" },
 
     -- Diff
     Added = { fg = "#00cc74" },
@@ -147,20 +119,11 @@ M.polish_hl = {
     DiffAdd = { fg = "#00cc74" },
     DiffChange = { fg = "#04c4d9" },
     DiffDelete = { fg = "#c13838" },
-    DiffText = {
-      fg = "#c2ced1",
-      bg = "#15262e",
-    },
+    DiffText = { fg = "#c2ced1", bg = "#15262e" },
 
     -- Completion
-    Pmenu = {
-      fg = "#c2ced1",
-      bg = "#15262e",
-    },
-    PmenuSel = {
-      fg = "#0f1c21",
-      bg = "#45565c",
-    },
+    Pmenu = { fg = "#c2ced1", bg = "#15262e" },
+    PmenuSel = { fg = "#0f1c21", bg = "#45565c" },
     PmenuSbar = { bg = "#15262e" },
     PmenuThumb = { bg = "#45565c" },
   },
@@ -168,48 +131,32 @@ M.polish_hl = {
   -- SYNTAX (classic vim syntax groups)
   syntax = {
     Boolean = { fg = "#c13838" },
-    Character = { fg = "#14b871" },
+    Character = { fg = "#c13838" },
     Conditional = { fg = "#d6ac63" },
     Constant = { fg = "#c13838" },
-    Define = {
-      fg = "#d6ac63",
-      sp = "none",
-    },
+    Define = { fg = "#d6ac63", sp = "none" },
     Delimiter = { fg = "#c2ced1" },
-    Float = { fg = "#e61313" },
-    Variable = { fg = "#ce2e76" },
-    Function = { fg = "#04c4d9" },
-    Identifier = {
-      fg = "#ce2e76",
-      sp = "none",
-    },
+    Float = { fg = "#c13838" },
+    Variable = { fg = "#d6724d" },
+    Function = { fg = "#10bdc9" },
+    Identifier = { fg = "#d6724d", sp = "none" },
     Include = { fg = "#d6ac63" },
     Keyword = { fg = "#d6ac63" },
     Label = { fg = "#d6ac63" },
-    Number = { fg = "#e61313" },
-    Operator = {
-      fg = "#d6ac63",
-      sp = "none",
-    },
+    Number = { fg = "#c13838" },
+    Operator = { fg = "#d6ac63", sp = "none" },
     PreProc = { fg = "#d6ac63" },
     Repeat = { fg = "#d6ac63" },
-    Special = { fg = "#e61313" },
-    SpecialChar = { fg = "#e61313" },
+    Special = { fg = "#c13838" },
+    SpecialChar = { fg = "#c13838" },
     Statement = { fg = "#d6ac63" },
     StorageClass = { fg = "#0187a6" },
-    String = { fg = "#14b871" },
-    Structure = { fg = "#a8547a" },
-    Tag = { fg = "#04c4d9" },
-    Todo = {
-      fg = "#d6ac63",
-      bg = "#13232a",
-      bold = true,
-    },
-    Type = {
-      fg = "#a8547a",
-      sp = "none",
-    },
-    Typedef = { fg = "#a8547a" },
+    String = { fg = "#6bc793" },
+    Structure = { fg = "#9c8acf" },
+    Tag = { fg = "#10bdc9" },
+    Todo = { fg = "#d6ac63", bg = "#13232a", bold = true },
+    Type = { fg = "#9c8acf", sp = "none" },
+    Typedef = { fg = "#9c8acf" },
   },
 
   -- TREESITTER
@@ -219,39 +166,32 @@ M.polish_hl = {
     ["@variable.builtin"] = { fg = "#d6724d" },
     ["@variable.parameter"] = { fg = "#a8547a" },
     ["@variable.member"] = { fg = "#0187a6" },
-    ["@variable.member.key"] = { fg = "#0187a6" },
-
+    ["@variable.member.key"] = { fg = "#c2ced1" },
     -- Modules
     ["@module"] = { fg = "#0187a6" },
-
     -- Constants
     ["@constant"] = { fg = "#c13838" },
-    ["@constant.builtin"] = { fg = "#c13838" },
+    ["@constant.builtin"] = { fg = "#0187a6" },
     ["@constant.macro"] = { fg = "#c13838" },
-
     -- Strings
     ["@string"] = { fg = "#6bc793" },
-    ["@string.regex"] = { fg = "#45565c" },
-    ["@string.escape"] = { fg = "#45565c" },
-    ["@character"] = { fg = "#6bc793" },
-
+    ["@string.regex"] = { fg = "#6bc793" },
+    ["@string.escape"] = { fg = "#c13838" },
+    ["@character"] = { fg = "#c13838" },
     -- Numbers
-    ["@number"] = { fg = "#0187a6" },
-    ["@number.float"] = { fg = "#0187a6" },
-
+    ["@number"] = { fg = "#c13838" },
+    ["@number.float"] = { fg = "#c13838" },
     -- Attributes
     ["@annotation"] = { fg = "#a8547a" },
-    ["@attribute"] = { fg = "#d6ac63" },
-
+    ["@attribute"] = { fg = "#0187a6" },
     -- Errors
-    ["@error"] = { fg = "#c13838" },
-
+    ["@error"] = { fg = "#10bdc9" },
     -- Keywords
-    ["@keyword.exception"] = { fg = "#c13838" },
+    ["@keyword.exception"] = { fg = "#d6ac63" },
     ["@keyword"] = { fg = "#d6ac63" },
-    ["@keyword.function"] = { fg = "#d6ac63" },
+    ["@keyword.function"] = { fg = "#0187a6" },
     ["@keyword.return"] = { fg = "#d6ac63" },
-    ["@keyword.operator"] = { fg = "#d6ac63" },
+    ["@keyword.operator"] = { fg = "#c2ced1" },
     ["@keyword.import"] = { fg = "#d6ac63" },
     ["@keyword.conditional"] = { fg = "#d6ac63" },
     ["@keyword.conditional.ternary"] = { fg = "#d6ac63" },
@@ -259,113 +199,63 @@ M.polish_hl = {
     ["@keyword.storage"] = { fg = "#0187a6" },
     ["@keyword.directive.define"] = { fg = "#d6ac63" },
     ["@keyword.directive"] = { fg = "#d6ac63" },
-
     -- Functions
     ["@function"] = { fg = "#10bdc9" },
     ["@function.builtin"] = { fg = "#10bdc9" },
     ["@function.macro"] = { fg = "#10bdc9" },
     ["@function.call"] = { fg = "#10bdc9" },
     ["@function.method"] = { fg = "#10bdc9" },
-    ["@function.method.call"] = { fg = "#10bdc9" },
-
+    ["@function.method.call"] = { fg = "#04c4d9" },
     -- Constructors
-    ["@constructor"] = { fg = "#0187a6" },
-
+    ["@constructor"] = { fg = "#10bdc9" },
     -- Operators
     ["@operator"] = { fg = "#d6ac63" },
     ["@reference"] = { fg = "#45565c" },
-
     -- Punctuation
     ["@punctuation.bracket"] = { fg = "#c2ced1" },
     ["@punctuation.delimiter"] = { fg = "#c2ced1" },
-
     -- Symbols
     ["@symbol"] = { fg = "#45565c" },
-
     -- Tags
     ["@tag"] = { fg = "#10bdc9" },
-    ["@tag.attribute"] = { fg = "#0187a6" },
+    ["@tag.attribute"] = { fg = "#d6ac63" },
     ["@tag.delimiter"] = { fg = "#10bdc9" },
-
     -- Text
-    ["@text"] = { fg = "#9fadb1" },
-    ["@text.emphasis"] = {
-      fg = "#0187a6",
-      italic = true,
-    },
-    ["@text.strike"] = {
-      fg = "#c13838",
-      strikethrough = true,
-    },
-
+    ["@text"] = { fg = "#77a2b6" },
+    ["@text.emphasis"] = { fg = "#0187a6", italic = true },
+    ["@text.strike"] = { fg = "#c13838", strikethrough = true },
     -- Types
     ["@type"] = { fg = "#9c8acf" },
     ["@type.builtin"] = { fg = "#9c8acf" },
-
     -- Definitions
-    ["@definition"] = {
-      sp = "#45565c",
-      underline = true,
-    },
+    ["@definition"] = { sp = "#45565c", underline = true },
     ["@scope"] = { bold = true },
-
     -- Properties
     ["@property"] = { fg = "#0187a6" },
     ["@field"] = { fg = "#0187a6" },
     ["@namespace"] = { fg = "#0187a6" },
-
     -- Markup
     ["@markup.heading"] = { fg = "#d6ac63" },
     ["@markup.raw"] = { fg = "#9c8acf" },
     ["@markup.link"] = { fg = "#10bdc9" },
-    ["@markup.link.url"] = {
-      fg = "#10bdc9",
-      underline = true,
-    },
+    ["@markup.link.url"] = { fg = "#10bdc9", underline = true },
     ["@markup.link.label"] = { fg = "#45565c" },
     ["@markup.list"] = { fg = "#c2ced1" },
-    ["@markup.strong"] = {
-      fg = "#d6724d",
-      bold = true,
-    },
+    ["@markup.strong"] = { fg = "#d6724d", bold = true },
     ["@markup.underline"] = { underline = true },
-    ["@markup.italic"] = {
-      fg = "#0187a6",
-      italic = true,
-    },
-    ["@markup.strikethrough"] = {
-      fg = "#c13838",
-      strikethrough = true,
-    },
+    ["@markup.italic"] = { fg = "#0187a6", italic = true },
+    ["@markup.strikethrough"] = { fg = "#c13838", strikethrough = true },
     ["@markup.quote"] = { fg = "#a8547a" },
-
     -- Comments
-    ["@comment"] = {
-      fg = "#45565c",
-      italic = true,
-    },
-    ["@comment.todo"] = {
-      fg = "#d6ac63",
-      bg = "#13232a",
-      bold = true,
-    },
-    ["@comment.warning"] = {
-      fg = "#0e171c",
-      bg = "#d6ac63",
-    },
-    ["@comment.note"] = {
-      fg = "#0e171c",
-      bg = "#45565c",
-    },
-    ["@comment.danger"] = {
-      fg = "#13232a",
-      bg = "#c13838",
-    },
-
+    ["@comment"] = { fg = "#45565c", italic = true },
+    ["@comment.todo"] = { fg = "#d6ac63", bg = "#13232a", bold = true },
+    ["@comment.warning"] = { fg = "#0e171c", bg = "#d6ac63" },
+    ["@comment.note"] = { fg = "#0e171c", bg = "#45565c" },
+    ["@comment.danger"] = { fg = "#13232a", bg = "#c13838" },
     -- Diff
     ["@diff.plus"] = { fg = "#6bc793" },
     ["@diff.minus"] = { fg = "#c13838" },
-    ["@diff.delta"] = { fg = "#10bdc9" },
+    ["@diff.delta"] = { fg = "#04c4d9" },
   },
 }
 
