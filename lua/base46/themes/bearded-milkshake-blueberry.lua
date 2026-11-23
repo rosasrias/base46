@@ -231,8 +231,8 @@ M.polish_hl = {
 
     -- Strings
     ["@string"] = { fg = "#008b17" },
-    ["@string.regex"] = { fg = "#747187b3" },
-    ["@string.escape"] = { fg = "#747187b3" },
+    ["@string.regex"] = { fg = "#747187" },
+    ["@string.escape"] = { fg = "#747187" },
     ["@character"] = { fg = "#008b17" },
 
     -- Numbers
@@ -273,14 +273,14 @@ M.polish_hl = {
 
     -- Operators
     ["@operator"] = { fg = "#c08403" },
-    ["@reference"] = { fg = "#747187b3" },
+    ["@reference"] = { fg = "#747187" },
 
     -- Punctuation
     ["@punctuation.bracket"] = { fg = "#07060c" },
     ["@punctuation.delimiter"] = { fg = "#07060c" },
 
     -- Symbols
-    ["@symbol"] = { fg = "#747187b3" },
+    ["@symbol"] = { fg = "#747187" },
 
     -- Tags
     ["@tag"] = { fg = "#0076c5" },
@@ -304,7 +304,7 @@ M.polish_hl = {
 
     -- Definitions
     ["@definition"] = {
-      sp = "#747187b3",
+      sp = "#747187",
       underline = true,
     },
     ["@scope"] = { bold = true },
@@ -322,7 +322,7 @@ M.polish_hl = {
       fg = "#0076c5",
       underline = true,
     },
-    ["@markup.link.label"] = { fg = "#747187b3" },
+    ["@markup.link.label"] = { fg = "#747187" },
     ["@markup.list"] = { fg = "#07060c" },
     ["@markup.strong"] = {
       fg = "#da2a5f",
@@ -341,7 +341,7 @@ M.polish_hl = {
 
     -- Comments
     ["@comment"] = {
-      fg = "#747187b3",
+      fg = "#747187",
       italic = true,
     },
     ["@comment.todo"] = {
@@ -355,7 +355,7 @@ M.polish_hl = {
     },
     ["@comment.note"] = {
       fg = "#cfcde5",
-      bg = "#747187b3",
+      bg = "#747187",
     },
     ["@comment.danger"] = {
       fg = "#e1e0ef",
@@ -370,3 +370,6 @@ M.polish_hl = {
 }
 
 -- THEME TYPE
+M.type = "light"
+
+return M

@@ -276,8 +276,8 @@ M.polish_hl = {
     ["@reference"] = { fg = "#4a5e84" },
 
     -- Punctuation
-    ["@punctuation.bracket"] = { fg = "#d0d7e466" },
-    ["@punctuation.delimiter"] = { fg = "#d0d7e466" },
+    ["@punctuation.bracket"] = { fg = "#d0d7e4" },
+    ["@punctuation.delimiter"] = { fg = "#d0d7e4" },
 
     -- Symbols
     ["@symbol"] = { fg = "#4a5e84" },
@@ -323,7 +323,7 @@ M.polish_hl = {
       underline = true,
     },
     ["@markup.link.label"] = { fg = "#4a5e84" },
-    ["@markup.list"] = { fg = "#d0d7e466" },
+    ["@markup.list"] = { fg = "#d0d7e4" },
     ["@markup.strong"] = {
       fg = "#ff738a",
       bold = true,
@@ -370,3 +370,6 @@ M.polish_hl = {
 }
 
 -- THEME TYPE
+M.type = "dark"
+
+return M
