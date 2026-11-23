@@ -215,19 +215,19 @@ M.polish_hl = {
   -- TREESITTER
   treesitter = {
     -- Variables
-    ["@variable"] = { fg = "#e15fd8" },
-    ["@variable.builtin"] = { fg = "#ff4319" },
+    ["@variable"] = { fg = "#b85c40" },
+    ["@variable.builtin"] = { fg = "#b85c40" },
     ["@variable.parameter"] = { fg = "#c47cbf" },
-    ["@variable.member"] = { fg = "#ff4319" },
-    ["@variable.member.key"] = { fg = "#ff4319" },
+    ["@variable.member"] = { fg = "#5288ba" },
+    ["@variable.member.key"] = { fg = "#5288ba" },
 
     -- Modules
-    ["@module"] = { fg = "#ff4319" },
+    ["@module"] = { fg = "#5288ba" },
 
     -- Constants
-    ["@constant"] = { fg = "#e35535" },
-    ["@constant.builtin"] = { fg = "#e35535" },
-    ["@constant.macro"] = { fg = "#e35535" },
+    ["@constant"] = { fg = "#c13838" },
+    ["@constant.builtin"] = { fg = "#c13838" },
+    ["@constant.macro"] = { fg = "#c13838" },
 
     -- Strings
     ["@string"] = { fg = "#a9dc76" },
@@ -236,18 +236,18 @@ M.polish_hl = {
     ["@character"] = { fg = "#a9dc76" },
 
     -- Numbers
-    ["@number"] = { fg = "#ff4319" },
-    ["@number.float"] = { fg = "#ff4319" },
+    ["@number"] = { fg = "#5288ba" },
+    ["@number.float"] = { fg = "#5288ba" },
 
     -- Attributes
     ["@annotation"] = { fg = "#c47cbf" },
     ["@attribute"] = { fg = "#c93e71" },
 
     -- Errors
-    ["@error"] = { fg = "#e35535" },
+    ["@error"] = { fg = "#c13838" },
 
     -- Keywords
-    ["@keyword.exception"] = { fg = "#e35535" },
+    ["@keyword.exception"] = { fg = "#c13838" },
     ["@keyword"] = { fg = "#c93e71" },
     ["@keyword.function"] = { fg = "#c93e71" },
     ["@keyword.return"] = { fg = "#c93e71" },
@@ -269,38 +269,38 @@ M.polish_hl = {
     ["@function.method.call"] = { fg = "#00b3bd" },
 
     -- Constructors
-    ["@constructor"] = { fg = "#c47cbf" },
+    ["@constructor"] = { fg = "#c93e71" },
 
     -- Operators
     ["@operator"] = { fg = "#c93e71" },
-    ["@reference"] = { fg = "#324056" },
+    ["@reference"] = { fg = "#355484" },
 
     -- Punctuation
-    ["@punctuation.bracket"] = { fg = "#324056" },
-    ["@punctuation.delimiter"] = { fg = "#324056" },
+    ["@punctuation.bracket"] = { fg = "#bacbe466" },
+    ["@punctuation.delimiter"] = { fg = "#bacbe466" },
 
     -- Symbols
     ["@symbol"] = { fg = "#355484" },
 
     -- Tags
     ["@tag"] = { fg = "#00b3bd" },
-    ["@tag.attribute"] = { fg = "#c93e71" },
+    ["@tag.attribute"] = { fg = "#5288ba" },
     ["@tag.delimiter"] = { fg = "#00b3bd" },
 
     -- Text
-    ["@text"] = { fg = "#bacbe4" },
+    ["@text"] = { fg = "#96afd5" },
     ["@text.emphasis"] = {
-      fg = "#ff4319",
+      fg = "#5288ba",
       italic = true,
     },
     ["@text.strike"] = {
-      fg = "#e35535",
+      fg = "#c13838",
       strikethrough = true,
     },
 
     -- Types
-    ["@type"] = { fg = "#c47cbf" },
-    ["@type.builtin"] = { fg = "#c47cbf" },
+    ["@type"] = { fg = "#cc9b52" },
+    ["@type.builtin"] = { fg = "#cc9b52" },
 
     -- Definitions
     ["@definition"] = {
@@ -310,38 +310,38 @@ M.polish_hl = {
     ["@scope"] = { bold = true },
 
     -- Properties
-    ["@property"] = { fg = "#ff4319" },
-    ["@field"] = { fg = "#ff4319" },
-    ["@namespace"] = { fg = "#00b3bd" },
+    ["@property"] = { fg = "#5288ba" },
+    ["@field"] = { fg = "#5288ba" },
+    ["@namespace"] = { fg = "#5288ba" },
 
     -- Markup
     ["@markup.heading"] = { fg = "#c93e71" },
-    ["@markup.raw"] = { fg = "#c47cbf" },
+    ["@markup.raw"] = { fg = "#cc9b52" },
     ["@markup.link"] = { fg = "#00b3bd" },
     ["@markup.link.url"] = {
       fg = "#00b3bd",
       underline = true,
     },
     ["@markup.link.label"] = { fg = "#355484" },
-    ["@markup.list"] = { fg = "#00b3bd" },
+    ["@markup.list"] = { fg = "#bacbe466" },
     ["@markup.strong"] = {
-      fg = "#e15fd8",
+      fg = "#b85c40",
       bold = true,
     },
     ["@markup.underline"] = { underline = true },
     ["@markup.italic"] = {
-      fg = "#ff4319",
+      fg = "#5288ba",
       italic = true,
     },
     ["@markup.strikethrough"] = {
-      fg = "#e35535",
+      fg = "#c13838",
       strikethrough = true,
     },
     ["@markup.quote"] = { fg = "#c47cbf" },
 
     -- Comments
     ["@comment"] = {
-      fg = "#324056",
+      fg = "#355484",
       italic = true,
     },
     ["@comment.todo"] = {
@@ -350,29 +350,23 @@ M.polish_hl = {
       bold = true,
     },
     ["@comment.warning"] = {
-      fg = "#101a29",
+      fg = "#0d1521",
       bg = "#c93e71",
     },
     ["@comment.note"] = {
-      fg = "#101a29",
+      fg = "#0d1521",
       bg = "#355484",
     },
     ["@comment.danger"] = {
       fg = "#142032",
-      bg = "#e35535",
+      bg = "#c13838",
     },
 
     -- Diff
-    ["@diff.plus"] = { fg = "#a9f65c" },
-    ["@diff.minus"] = { fg = "#e35535" },
+    ["@diff.plus"] = { fg = "#a9dc76" },
+    ["@diff.minus"] = { fg = "#c13838" },
     ["@diff.delta"] = { fg = "#00b3bd" },
   },
 }
 
 -- THEME TYPE
-M.type = "dark"
-
--- BASE46 OVERRIDE
-M = require("base46").override_theme(M, "bearded-surprising-blueberry.lua")
-
-return M

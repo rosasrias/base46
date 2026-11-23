@@ -215,14 +215,14 @@ M.polish_hl = {
   -- TREESITTER
   treesitter = {
     -- Variables
-    ["@variable"] = { fg = "#d46ec0" },
-    ["@variable.builtin"] = { fg = "#e35535" },
+    ["@variable"] = { fg = "#c62f52" },
+    ["@variable.builtin"] = { fg = "#c62f52" },
     ["@variable.parameter"] = { fg = "#d46ec0" },
-    ["@variable.member"] = { fg = "#e35535" },
-    ["@variable.member.key"] = { fg = "#e35535" },
+    ["@variable.member"] = { fg = "#d4770c" },
+    ["@variable.member.key"] = { fg = "#d4770c" },
 
     -- Modules
-    ["@module"] = { fg = "#e35535" },
+    ["@module"] = { fg = "#d4770c" },
 
     -- Constants
     ["@constant"] = { fg = "#e35535" },
@@ -236,8 +236,8 @@ M.polish_hl = {
     ["@character"] = { fg = "#00a884" },
 
     -- Numbers
-    ["@number"] = { fg = "#e35535" },
-    ["@number.float"] = { fg = "#e35535" },
+    ["@number"] = { fg = "#d4770c" },
+    ["@number.float"] = { fg = "#d4770c" },
 
     -- Attributes
     ["@annotation"] = { fg = "#d46ec0" },
@@ -269,28 +269,28 @@ M.polish_hl = {
     ["@function.method.call"] = { fg = "#11b7d4" },
 
     -- Constructors
-    ["@constructor"] = { fg = "#d46ec0" },
+    ["@constructor"] = { fg = "#38c7bd" },
 
     -- Operators
     ["@operator"] = { fg = "#c7910c" },
-    ["@reference"] = { fg = "#32383f" },
+    ["@reference"] = { fg = "#8a9eb7" },
 
     -- Punctuation
-    ["@punctuation.bracket"] = { fg = "#32383f" },
-    ["@punctuation.delimiter"] = { fg = "#32383f" },
+    ["@punctuation.bracket"] = { fg = "#c3c6cb60" },
+    ["@punctuation.delimiter"] = { fg = "#c3c6cb60" },
 
     -- Symbols
     ["@symbol"] = { fg = "#8a9eb7" },
 
     -- Tags
     ["@tag"] = { fg = "#11b7d4" },
-    ["@tag.attribute"] = { fg = "#c7910c" },
+    ["@tag.attribute"] = { fg = "#d4770c" },
     ["@tag.delimiter"] = { fg = "#11b7d4" },
 
     -- Text
-    ["@text"] = { fg = "#c3c6cb" },
+    ["@text"] = { fg = "#a8adb3" },
     ["@text.emphasis"] = {
-      fg = "#e35535",
+      fg = "#d4770c",
       italic = true,
     },
     ["@text.strike"] = {
@@ -299,8 +299,8 @@ M.polish_hl = {
     },
 
     -- Types
-    ["@type"] = { fg = "#d46ec0" },
-    ["@type.builtin"] = { fg = "#d46ec0" },
+    ["@type"] = { fg = "#a85ff1" },
+    ["@type.builtin"] = { fg = "#a85ff1" },
 
     -- Definitions
     ["@definition"] = {
@@ -310,27 +310,27 @@ M.polish_hl = {
     ["@scope"] = { bold = true },
 
     -- Properties
-    ["@property"] = { fg = "#e35535" },
-    ["@field"] = { fg = "#e35535" },
-    ["@namespace"] = { fg = "#11b7d4" },
+    ["@property"] = { fg = "#d4770c" },
+    ["@field"] = { fg = "#d4770c" },
+    ["@namespace"] = { fg = "#d4770c" },
 
     -- Markup
     ["@markup.heading"] = { fg = "#c7910c" },
-    ["@markup.raw"] = { fg = "#d46ec0" },
+    ["@markup.raw"] = { fg = "#a85ff1" },
     ["@markup.link"] = { fg = "#11b7d4" },
     ["@markup.link.url"] = {
       fg = "#11b7d4",
       underline = true,
     },
     ["@markup.link.label"] = { fg = "#8a9eb7" },
-    ["@markup.list"] = { fg = "#11b7d4" },
+    ["@markup.list"] = { fg = "#c3c6cb60" },
     ["@markup.strong"] = {
-      fg = "#d46ec0",
+      fg = "#c62f52",
       bold = true,
     },
     ["@markup.underline"] = { underline = true },
     ["@markup.italic"] = {
-      fg = "#e35535",
+      fg = "#d4770c",
       italic = true,
     },
     ["@markup.strikethrough"] = {
@@ -341,7 +341,7 @@ M.polish_hl = {
 
     -- Comments
     ["@comment"] = {
-      fg = "#32383f",
+      fg = "#8a9eb7",
       italic = true,
     },
     ["@comment.todo"] = {
@@ -350,11 +350,11 @@ M.polish_hl = {
       bold = true,
     },
     ["@comment.warning"] = {
-      fg = "#111418",
+      fg = "#0c0f11",
       bg = "#c7910c",
     },
     ["@comment.note"] = {
-      fg = "#111418",
+      fg = "#0c0f11",
       bg = "#8a9eb7",
     },
     ["@comment.danger"] = {
@@ -370,9 +370,3 @@ M.polish_hl = {
 }
 
 -- THEME TYPE
-M.type = "dark"
-
--- BASE46 OVERRIDE
-M = require("base46").override_theme(M, "bearded-black-amethyst.lua")
-
-return M
