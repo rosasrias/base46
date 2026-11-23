@@ -168,26 +168,27 @@ M.polish_hl = {
     ["@variable.member"] = { fg = "#d06200" },
     ["@variable.member.key"] = { fg = "#091316" },
     -- Modules
-    ["@module"] = { fg = "#d06200" },
+    ["@module"] = { fg = "#cb0202" },
+    ["@namespace"] = { fg = "#d06200" },
     -- Constants
     ["@constant"] = { fg = "#d03333" },
-    ["@constant.builtin"] = { fg = "#d06200" },
-    ["@constant.macro"] = { fg = "#d03333" },
+    ["@constant.builtin"] = { fg = "#cb0202" },
+    ["@constant.macro"] = { fg = "#ac2121" },
     -- Strings
     ["@string"] = { fg = "#189433" },
-    ["@string.regex"] = { fg = "#189433" },
-    ["@string.escape"] = { fg = "#d03333" },
-    ["@character"] = { fg = "#d03333" },
+    ["@string.regex"] = { fg = "#14852a" },
+    ["@string.escape"] = { fg = "#189433" },
+    ["@character"] = { fg = "#189433" },
     -- Numbers
-    ["@number"] = { fg = "#d03333" },
-    ["@number.float"] = { fg = "#d03333" },
+    ["@number"] = { fg = "#d06200" },
+    ["@number.float"] = { fg = "#d06200" },
     -- Attributes
     ["@annotation"] = { fg = "#e022b4" },
-    ["@attribute"] = { fg = "#d06200" },
+    ["@attribute"] = { fg = "#bb9600" },
     -- Errors
-    ["@error"] = { fg = "#0073d1" },
+    ["@error"] = { fg = "#bb9600" },
     -- Keywords
-    ["@keyword.exception"] = { fg = "#bb9600" },
+    ["@keyword.exception"] = { fg = "#ac2121" },
     ["@keyword"] = { fg = "#bb9600" },
     ["@keyword.function"] = { fg = "#009999" },
     ["@keyword.return"] = { fg = "#bb9600" },
@@ -205,20 +206,20 @@ M.polish_hl = {
     ["@function.macro"] = { fg = "#0073d1" },
     ["@function.call"] = { fg = "#0073d1" },
     ["@function.method"] = { fg = "#0073d1" },
-    ["@function.method.call"] = { fg = "#0468bf" },
+    ["@function.method.call"] = { fg = "#0073d1" },
     -- Constructors
     ["@constructor"] = { fg = "#0073d1" },
     -- Operators
-    ["@operator"] = { fg = "#bb9600" },
-    ["@reference"] = { fg = "#68919c" },
+    ["@operator"] = { fg = "#091316" },
+    ["@reference"] = { fg = "#aeb6ba" },
     -- Punctuation
     ["@punctuation.bracket"] = { fg = "#091316" },
     ["@punctuation.delimiter"] = { fg = "#091316" },
     -- Symbols
-    ["@symbol"] = { fg = "#68919c" },
+    ["@symbol"] = { fg = "#189433" },
     -- Tags
     ["@tag"] = { fg = "#0073d1" },
-    ["@tag.attribute"] = { fg = "#bb9600" },
+    ["@tag.attribute"] = { fg = "#8737e6" },
     ["@tag.delimiter"] = { fg = "#0073d1" },
     -- Text
     ["@text"] = { fg = "#3c4247" },
@@ -228,18 +229,17 @@ M.polish_hl = {
     ["@type"] = { fg = "#8737e6" },
     ["@type.builtin"] = { fg = "#8737e6" },
     -- Definitions
-    ["@definition"] = { sp = "#68919c", underline = true },
+    ["@definition"] = { sp = "#aeb6ba", underline = true },
     ["@scope"] = { bold = true },
     -- Properties
-    ["@property"] = { fg = "#d06200" },
-    ["@field"] = { fg = "#d06200" },
-    ["@namespace"] = { fg = "#d06200" },
+    ["@property"] = { fg = "#cb0202" },
+    ["@field"] = { fg = "#cb0202" },
     -- Markup
     ["@markup.heading"] = { fg = "#bb9600" },
     ["@markup.raw"] = { fg = "#8737e6" },
-    ["@markup.link"] = { fg = "#0073d1" },
+    ["@markup.link"] = { fg = "#0468bf" },
     ["@markup.link.url"] = { fg = "#0073d1", underline = true },
-    ["@markup.link.label"] = { fg = "#68919c" },
+    ["@markup.link.label"] = { fg = "#aeb6ba" },
     ["@markup.list"] = { fg = "#091316" },
     ["@markup.strong"] = { fg = "#e8386a", bold = true },
     ["@markup.underline"] = { underline = true },
@@ -250,11 +250,11 @@ M.polish_hl = {
     ["@comment"] = { fg = "#68919c", italic = true },
     ["@comment.todo"] = { fg = "#bb9600", bg = "#f9f9fa", bold = true },
     ["@comment.warning"] = { fg = "#e9ebed", bg = "#bb9600" },
-    ["@comment.note"] = { fg = "#e9ebed", bg = "#68919c" },
+    ["@comment.note"] = { fg = "#e9ebed", bg = "#aeb6ba" },
     ["@comment.danger"] = { fg = "#f9f9fa", bg = "#ac2121" },
     -- Diff
-    ["@diff.plus"] = { fg = "#189433" },
-    ["@diff.minus"] = { fg = "#d03333" },
+    ["@diff.plus"] = { fg = "#14852a" },
+    ["@diff.minus"] = { fg = "#ac2121" },
     ["@diff.delta"] = { fg = "#0468bf" },
   },
 }

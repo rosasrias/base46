@@ -168,26 +168,27 @@ M.polish_hl = {
     ["@variable.member"] = { fg = "#f69662" },
     ["@variable.member.key"] = { fg = "#d3b1b1" },
     -- Modules
-    ["@module"] = { fg = "#f69662" },
+    ["@module"] = { fg = "#ff7768" },
+    ["@namespace"] = { fg = "#f69662" },
     -- Constants
     ["@constant"] = { fg = "#fb7a6c" },
-    ["@constant.builtin"] = { fg = "#f69662" },
+    ["@constant.builtin"] = { fg = "#ff7768" },
     ["@constant.macro"] = { fg = "#fb7a6c" },
     -- Strings
     ["@string"] = { fg = "#69d293" },
-    ["@string.regex"] = { fg = "#69d293" },
-    ["@string.escape"] = { fg = "#fb7a6c" },
-    ["@character"] = { fg = "#fb7a6c" },
+    ["@string.regex"] = { fg = "#74be7d" },
+    ["@string.escape"] = { fg = "#69d293" },
+    ["@character"] = { fg = "#69d293" },
     -- Numbers
-    ["@number"] = { fg = "#fb7a6c" },
-    ["@number.float"] = { fg = "#fb7a6c" },
+    ["@number"] = { fg = "#f69662" },
+    ["@number.float"] = { fg = "#f69662" },
     -- Attributes
     ["@annotation"] = { fg = "#d995c9" },
-    ["@attribute"] = { fg = "#f69662" },
+    ["@attribute"] = { fg = "#edbc7f" },
     -- Errors
-    ["@error"] = { fg = "#17d7d7" },
+    ["@error"] = { fg = "#edbc7f" },
     -- Keywords
-    ["@keyword.exception"] = { fg = "#edbc7f" },
+    ["@keyword.exception"] = { fg = "#fb7a6c" },
     ["@keyword"] = { fg = "#edbc7f" },
     ["@keyword.function"] = { fg = "#17d7c4" },
     ["@keyword.return"] = { fg = "#edbc7f" },
@@ -205,20 +206,20 @@ M.polish_hl = {
     ["@function.macro"] = { fg = "#17d7d7" },
     ["@function.call"] = { fg = "#17d7d7" },
     ["@function.method"] = { fg = "#17d7d7" },
-    ["@function.method.call"] = { fg = "#4fc1e8" },
+    ["@function.method.call"] = { fg = "#17d7d7" },
     -- Constructors
     ["@constructor"] = { fg = "#17d7d7" },
     -- Operators
-    ["@operator"] = { fg = "#edbc7f" },
-    ["@reference"] = { fg = "#5d4242" },
+    ["@operator"] = { fg = "#d3b1b1" },
+    ["@reference"] = { fg = "#574040" },
     -- Punctuation
     ["@punctuation.bracket"] = { fg = "#d3b1b1" },
     ["@punctuation.delimiter"] = { fg = "#d3b1b1" },
     -- Symbols
-    ["@symbol"] = { fg = "#5d4242" },
+    ["@symbol"] = { fg = "#69d293" },
     -- Tags
     ["@tag"] = { fg = "#17d7d7" },
-    ["@tag.attribute"] = { fg = "#edbc7f" },
+    ["@tag.attribute"] = { fg = "#ad92ff" },
     ["@tag.delimiter"] = { fg = "#17d7d7" },
     -- Text
     ["@text"] = { fg = "#ad9e9e" },
@@ -228,18 +229,17 @@ M.polish_hl = {
     ["@type"] = { fg = "#ad92ff" },
     ["@type.builtin"] = { fg = "#ad92ff" },
     -- Definitions
-    ["@definition"] = { sp = "#5d4242", underline = true },
+    ["@definition"] = { sp = "#574040", underline = true },
     ["@scope"] = { bold = true },
     -- Properties
-    ["@property"] = { fg = "#f69662" },
-    ["@field"] = { fg = "#f69662" },
-    ["@namespace"] = { fg = "#f69662" },
+    ["@property"] = { fg = "#ff7768" },
+    ["@field"] = { fg = "#ff7768" },
     -- Markup
     ["@markup.heading"] = { fg = "#edbc7f" },
     ["@markup.raw"] = { fg = "#ad92ff" },
-    ["@markup.link"] = { fg = "#17d7d7" },
+    ["@markup.link"] = { fg = "#4fc1e8" },
     ["@markup.link.url"] = { fg = "#17d7d7", underline = true },
-    ["@markup.link.label"] = { fg = "#5d4242" },
+    ["@markup.link.label"] = { fg = "#574040" },
     ["@markup.list"] = { fg = "#d3b1b1" },
     ["@markup.strong"] = { fg = "#f08390", bold = true },
     ["@markup.underline"] = { underline = true },
@@ -250,10 +250,10 @@ M.polish_hl = {
     ["@comment"] = { fg = "#5d4242", italic = true },
     ["@comment.todo"] = { fg = "#edbc7f", bg = "#352a2a", bold = true },
     ["@comment.warning"] = { fg = "#281f1f", bg = "#edbc7f" },
-    ["@comment.note"] = { fg = "#281f1f", bg = "#5d4242" },
+    ["@comment.note"] = { fg = "#281f1f", bg = "#574040" },
     ["@comment.danger"] = { fg = "#352a2a", bg = "#fb7a6c" },
     -- Diff
-    ["@diff.plus"] = { fg = "#69d293" },
+    ["@diff.plus"] = { fg = "#74be7d" },
     ["@diff.minus"] = { fg = "#fb7a6c" },
     ["@diff.delta"] = { fg = "#4fc1e8" },
   },
