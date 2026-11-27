@@ -1,30 +1,29 @@
 -- Credits to the original Vira Theme (vira.vsc-vira-theme, successor of Material Theme)
 -- Adapted from the official VSCode palette Vira-Theme-Ocean.json:
 --   editor.background #0F111A, foreground #CED1E3, accent #80CBC4
--- Scale follows the base46 README rules from black, computed with
--- base46.colors.change_hex_lightness: darker_black -6, black2 +6,
--- one_bg +10, one_bg2/one_bg3 +6 chained, line +15, grey is the
--- original ruler color (README: choose the perfect grey),
--- grey_fg +10 grey, grey_fg2 +5 grey_fg, sun +8 yellow.
+-- UI surfaces use the official palette: input.background -> one_bg,
+-- editor.lineHighlightBorder -> line, editorRuler.foreground -> grey,
+-- editorLineNumber.activeForeground / sideBar.foreground -> grey_fg2.
+-- Remaining shades are derived with base46.colors.change_hex_lightness.
 
 local M = {}
 
 M.base_30 = {
   white = "#CED1E3",
-  darker_black = "#030406",
+  darker_black = "#040407",
   black = "#0F111A", --  nvim bg
-  black2 = "#1a1d2d",
-  one_bg = "#21263a",
-  one_bg2 = "#2c324d",
-  one_bg3 = "#373e60",
+  black2 = "#1a1e2d",
+  one_bg = "#1A1C25", -- original input.background
+  one_bg2 = "#272a37",
+  one_bg3 = "#343849",
   grey = "#36394A", -- original indent guide / ruler
-  grey_fg = "#4b4f67",
-  grey_fg2 = "#555a75",
+  grey_fg = "#43475c", -- derived: lighten(grey) for hierarchy
+  grey_fg2 = "#535B79", -- original line number active / sidebar fg
   light_grey = "#464B5D", -- original comment color
   red = "#f07178",
   baby_pink = "#ff9cac", -- original boolean token
   pink = "#f07178",
-  line = "#2a304a",
+  line = "#2D3143", -- original line highlight border
   green = "#C3E88D",
   vibrant_green = "#d4eeae",
   nord_blue = "#aac5ff",
@@ -36,20 +35,20 @@ M.base_30 = {
   teal = "#80CBC4", -- original accent (selection/badge/tab border)
   orange = "#F78C6C", -- original number token
   cyan = "#89DDFF",
-  statusline_bg = "#1a1d2d",
-  lightbg = "#21263a",
+  statusline_bg = "#1a1e2d",
+  lightbg = "#1A1C25",
   pmenu_bg = "#80CBC4",
   folder_bg = "#82AAFF",
 }
 
 M.base_16 = {
   base00 = "#0F111A",
-  base01 = "#21263a",
-  base02 = "#2c324d",
+  base01 = "#1A1C25",
+  base02 = "#272a37",
   base03 = "#464B5D",
-  base04 = "#555a75",
+  base04 = "#535B79",
   base05 = "#CED1E3",
-  base06 = "#daddea",
+  base06 = "#dbddea",
   base07 = "#ffffff",
   base08 = "#f07178",
   base09 = "#F78C6C",

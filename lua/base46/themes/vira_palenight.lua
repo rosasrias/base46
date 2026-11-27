@@ -1,30 +1,29 @@
 -- Credits to the original Vira Theme (vira.vsc-vira-theme, successor of Material Theme)
 -- Adapted from the official VSCode palette Vira-Theme-Palenight.json:
 --   editor.background #232634, foreground #CED1E3, accent #80CBC4
--- Scale follows the base46 README rules from black, computed with
--- base46.colors.change_hex_lightness: darker_black -6, black2 +6,
--- one_bg +10, one_bg2/one_bg3 +6 chained, line +15, grey is the
--- original ruler color (README: choose the perfect grey),
--- grey_fg +10 grey, grey_fg2 +5 grey_fg, sun +8 yellow.
+-- UI surfaces use the official palette: input.background -> one_bg,
+-- editor.lineHighlightBorder -> line, editorRuler.foreground -> grey,
+-- editorLineNumber.activeForeground / sideBar.foreground -> grey_fg2.
+-- Remaining shades are derived with base46.colors.change_hex_lightness.
 
 local M = {}
 
 M.base_30 = {
   white = "#CED1E3",
-  darker_black = "#161821",
+  darker_black = "#171922",
   black = "#232634", --  nvim bg
   black2 = "#2f3346",
-  one_bg = "#373c52",
-  one_bg2 = "#434964",
-  one_bg3 = "#4f5676",
+  one_bg = "#333747", -- original input.background
+  one_bg2 = "#404559",
+  one_bg3 = "#4d536b",
   grey = "#4E5579", -- original indent guide / ruler
-  grey_fg = "#616a98",
-  grey_fg2 = "#6f77a3",
+  grey_fg = "#5a628c", -- derived: lighten(grey) for hierarchy
+  grey_fg2 = "#676E95", -- original line number active / sidebar fg
   light_grey = "#676E95", -- original comment color
   red = "#f07178",
   baby_pink = "#ff9cac", -- original boolean token
   pink = "#f07178",
-  line = "#414761",
+  line = "#373D53", -- original line highlight border
   green = "#C3E88D",
   vibrant_green = "#d4eeae",
   nord_blue = "#aac5ff",
@@ -37,19 +36,19 @@ M.base_30 = {
   orange = "#F78C6C", -- original number token
   cyan = "#89DDFF",
   statusline_bg = "#2f3346",
-  lightbg = "#373c52",
+  lightbg = "#333747",
   pmenu_bg = "#80CBC4",
   folder_bg = "#82AAFF",
 }
 
 M.base_16 = {
   base00 = "#232634",
-  base01 = "#373c52",
-  base02 = "#434964",
+  base01 = "#333747",
+  base02 = "#404559",
   base03 = "#676E95",
-  base04 = "#6f77a3",
+  base04 = "#676E95",
   base05 = "#CED1E3",
-  base06 = "#daddea",
+  base06 = "#dbddea",
   base07 = "#ffffff",
   base08 = "#f07178",
   base09 = "#F78C6C",

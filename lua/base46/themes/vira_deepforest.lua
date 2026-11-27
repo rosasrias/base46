@@ -3,30 +3,29 @@
 --   editor.background #111816, foreground #CAE5D5, accent #80CBC4
 -- Deepforest uses its own muted ANSI set (blue #6FA0DE,
 -- magenta #A68DCD, cyan #74C9DE, orange #CC8868, boolean #D3959B).
--- Scale follows the base46 README rules from black, computed with
--- base46.colors.change_hex_lightness: darker_black -6, black2 +6,
--- one_bg +10, one_bg2/one_bg3 +6 chained, line +15, grey is the
--- original ruler color (README: choose the perfect grey),
--- grey_fg +10 grey, grey_fg2 +5 grey_fg, sun +8 yellow.
+-- UI surfaces use the official palette: input.background -> one_bg,
+-- editor.lineHighlightBorder -> line, editorRuler.foreground -> grey,
+-- editorLineNumber.activeForeground / sideBar.foreground -> grey_fg2.
+-- Remaining shades are derived with base46.colors.change_hex_lightness.
 
 local M = {}
 
 M.base_30 = {
   white = "#CAE5D5",
-  darker_black = "#040605",
+  darker_black = "#040606",
   black = "#111816", --  nvim bg
-  black2 = "#1d2926",
-  one_bg = "#263531",
-  one_bg2 = "#324641",
-  one_bg3 = "#3e5751",
+  black2 = "#1e2a26",
+  one_bg = "#1A2520", -- original input.background
+  one_bg2 = "#273730",
+  one_bg3 = "#344940",
   grey = "#2C3F39", -- original indent guide / ruler
-  grey_fg = "#405d54",
-  grey_fg2 = "#4a6c61",
+  grey_fg = "#395149", -- derived: lighten(grey) for hierarchy
+  grey_fg2 = "#475C59", -- original line number active / sidebar fg
   light_grey = "#3B544D", -- original comment color
   red = "#f07178",
   baby_pink = "#D3959B", -- original boolean token
   pink = "#f07178",
-  line = "#30443f",
+  line = "#1D2B26", -- original line highlight border
   green = "#C3E88D",
   vibrant_green = "#d4eeae",
   nord_blue = "#90b5e5",
@@ -38,20 +37,20 @@ M.base_30 = {
   teal = "#80CBC4", -- original accent (selection/badge/tab border)
   orange = "#CC8868", -- original number token
   cyan = "#74C9DE",
-  statusline_bg = "#1d2926",
-  lightbg = "#263531",
+  statusline_bg = "#1e2a26",
+  lightbg = "#1A2520",
   pmenu_bg = "#80CBC4",
   folder_bg = "#6FA0DE",
 }
 
 M.base_16 = {
   base00 = "#111816",
-  base01 = "#263531",
-  base02 = "#324641",
+  base01 = "#1A2520",
+  base02 = "#273730",
   base03 = "#3B544D",
-  base04 = "#4a6c61",
+  base04 = "#475C59",
   base05 = "#CAE5D5",
-  base06 = "#d7ebdf",
+  base06 = "#d8ece0",
   base07 = "#ffffff",
   base08 = "#f07178",
   base09 = "#CC8868",
