@@ -262,4 +262,4 @@ M.polish_hl = {
 -- THEME TYPE
 M.type = "light"
 
-return require("base46.themes.bearded_palette")(M)
+return M
